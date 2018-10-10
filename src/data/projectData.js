@@ -11,7 +11,7 @@ let projectData = [
       'CSS Grid',
       'Audio',
       'ES6',
-      'Javascript',
+      'JavaScript',
       'HTML',
     ],
   },
@@ -30,7 +30,7 @@ let projectData = [
       'HTML',
       'Audio',
       'ES6',
-      'Javascript',
+      'JavaScript',
     ],
   },
   {
@@ -39,28 +39,28 @@ let projectData = [
     description:
       'Free Code Camp project workign with React, Flexbox, Key Events and math',
     link: 'https://codepen.io/Alba-C/full/ajYGYb/',
-    keywords: ['React', 'JSX', 'CSS', 'Flexbox', 'ES6', 'HTML', 'Javascript'],
+    keywords: ['React', 'JSX', 'CSS', 'Flexbox', 'ES6', 'HTML', 'JavaScript'],
   },
   {
     image: './assets/d3ChoroplethMap400x300.png',
     title: 'D3.js Choropleth Map',
     description: 'Data Visualization using D3.js and Async REST API Calls',
     link: 'https://codepen.io/Alba-C/full/BOKgVX/',
-    keywords: ['D3.js', 'ES6', 'REST API', 'Data Viz', 'Javascript'],
+    keywords: ['D3.js', 'ES6', 'REST API', 'Data Viz', 'JavaScript'],
   },
   {
     image: './assets/d3Heatmap400x300.png',
     title: 'D3.js Heatmap',
     description: 'Data Visualization using D3.js and Async REST API',
     link: 'https://codepen.io/Alba-C/full/MqaYER/',
-    keywords: ['D3.js', 'ES6', 'REST API', 'Data Viz', 'Javascript'],
+    keywords: ['D3.js', 'ES6', 'REST API', 'Data Viz', 'JavaScript'],
   },
   {
     image: './assets/d3Treemap400x300.png',
     title: 'D3.js Treemap',
     description: 'Data Visualization using D3.js and Async REST API',
     link: 'https://codepen.io/Alba-C/full/KxaRop/',
-    keywords: ['D3.js', 'ES6', 'REST API', 'Data Viz', 'Javascript'],
+    keywords: ['D3.js', 'ES6', 'REST API', 'Data Viz', 'JavaScript'],
   },
   {
     image: './assets/d3BarChart400x300.png',
@@ -72,7 +72,7 @@ let projectData = [
       'ES6',
       'REST API',
       'Data Viz',
-      'Javascript',
+      'JavaScript',
       'CSS Animation',
     ],
   },
@@ -81,7 +81,7 @@ let projectData = [
     title: 'D3.js Scatter Plot Graph',
     description: 'Data Visualization using D3.js and Async REST API',
     link: 'https://codepen.io/Alba-C/full/BONNQg/',
-    keywords: ['D3.js', 'ES6', 'REST API', 'Data Viz', 'Javascript'],
+    keywords: ['D3.js', 'ES6', 'REST API', 'Data Viz', 'JavaScript'],
   },
   {
     image: './assets/quoteMachine400x300.png',
@@ -122,7 +122,7 @@ let projectData = [
       'JQuery',
       'HTML',
       'CSS',
-      'Javascript',
+      'JavaScript',
       'REST API',
       'BootStrap',
       'Responsive',
@@ -167,7 +167,7 @@ let projectData = [
     description:
       'Write Markdown in the editor and see it rendered on the right.  Uses the MarkedJS Library to compile to HTML.',
     link: 'https://codepen.io/Alba-C/full/ZjBvwY/',
-    keywords: ['HTML', 'FlexBox', 'Javascript', 'CSS', 'Responsive'],
+    keywords: ['HTML', 'FlexBox', 'JavaScript', 'CSS', 'Responsive'],
   },
   {
     image: './assets/technicalDocument400x300.png',
@@ -220,7 +220,22 @@ let projectData = [
     description:
       'My personal portfolio site, built using Gatsby, React and CSS-in-JS using Emotion',
     link: 'http://www.peridotrealestate.com ',
-    keywords: ['Gatsby', 'React', 'Emotion', 'CSS-in-JS', 'Responsive', 'Websites'],
+    keywords: [
+      'Gatsby',
+      'React',
+      'Emotion',
+      'CSS-in-JS',
+      'Responsive',
+      'Websites',
+    ],
+  },
+  {
+    image: './assets/spotAutoVolume400x300.png',
+    title: 'Spotify Auto Volume',
+    description:
+      'Node JS app that listens for ads on the Spotify Mac App and automatically lowers the volume until the ads end.',
+    link: 'https://github.com/Alba-C/SpotifyAutoVolume',
+    keywords: ['Node JS', 'JavaScript'],
   },
 ]
 export default projectData

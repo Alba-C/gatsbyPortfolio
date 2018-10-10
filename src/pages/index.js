@@ -8,6 +8,7 @@ import Projects from '../components/Projects'
 import Banner from '../components/banner'
 import Contact from '../components/contact';
 import About from '../components/about'
+import BackToTop from '../components/backToTop'
 
 
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -47,6 +48,7 @@ class Index extends Component {
 
     return (
       <Layout>
+        <BackToTop bgColor={'rgb(189, 59, 36)'} arrowColor={'white'} anchor={'/#'}/>
         <Banner />
         <Keywords
           keywords={this.state.keywords}
