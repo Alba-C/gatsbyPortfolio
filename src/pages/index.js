@@ -6,12 +6,9 @@ import Keywords from '../components/Keywords'
 import projectData from '../Data/projectData'
 import Projects from '../components/Projects'
 import Banner from '../components/banner'
-import Contact from '../components/contact';
+import Contact from '../components/contact'
 import About from '../components/about'
 import BackToTop from '../components/backToTop'
-
-
-import 'bootstrap/dist/css/bootstrap.min.css'
 
 class Index extends Component {
   constructor(props) {
@@ -25,30 +22,27 @@ class Index extends Component {
   }
 
   keywordClick(e) {
-    console.log(e.target.text);
+
     this.state.filterWord === e.target.text
       ? this.setState({ filterWord: '' })
       : this.setState({ filterWord: e.target.text })
   }
 
   componentDidMount = () => {
-    //pull in keywords from projectData only, this will overwrite the data from the keywordArr
     let arr = []
     projectData.map(proj => {
-      return arr = arr.concat(proj.keywords);
+      return (arr = arr.concat(proj.keywords))
     })
     let set = new Set(arr)
     let keyArr = Array.from(set)
     return this.setState({ keywords: keyArr })
-    
   }
 
   render() {
-    //console.log(keySet)
-
+  
     return (
       <Layout>
-        <BackToTop bgColor={'rgb(189, 59, 36)'} arrowColor={'white'} anchor={'/#'}/>
+        <BackToTop />
         <Banner />
         <Keywords
           keywords={this.state.keywords}
@@ -59,9 +53,8 @@ class Index extends Component {
           projectData={this.state.projectData}
           filterWord={this.state.filterWord}
         />
-        <About/>
+        <About />
         <Contact />
-        
       </Layout>
     )
   }

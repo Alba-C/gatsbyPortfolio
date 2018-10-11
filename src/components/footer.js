@@ -10,12 +10,11 @@ const footer = () => {
     display: 'flex',
     justifyContent: 'space-between',
     zIndex: 100,
-    // height: '100%',
-    // '@media (max-width: 600px)': {
-    //   display: 'block',
-    //   // float: 'none',
-    //   // textAlign: 'right',
-    // },
+    
+    '@media (max-width: 600px)': {
+ 
+      width: '100%'
+    },
   })
 
   return (
@@ -25,7 +24,7 @@ const footer = () => {
         color: white;
         /* padding: 30px; */
         /* position: absolute; */
-        width: 100vw;
+        width: 100%;
         bottom: 0;
       `}
     >

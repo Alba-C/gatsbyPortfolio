@@ -68,50 +68,33 @@ const Resume = () => {
       margin-left: 10px;
     }
   `
-  return (
-    <Layout>
+  return <Layout>
       <div className={globalStyles}>
         <div className="res-header">
-          <div
-            className={css`
+          <div className={css`
               display: flex;
               align-items: baseline;
               justify-content: space-between;
-              border-bottom: solid 6px #002851;
-            `}
-          >
+              border-bottom: solid 6px #002851;`}>
             <h1>Christopher Albanese</h1>
             <h2>| Front-End Web Developer</h2>
           </div>
         </div>
-        <div
-          className={css`
+        <div className={css`
             display: flex;
             justify-content: space-between;
-            margin-bottom: 1rem;
-          `}
-        >
-          <a
-            href="mailto:Christopher@CafeRE.com"
-            className={css`
-              color: rgb(69, 69, 69);
-            `}
-          >
+            margin-bottom: 1rem;`}>
+          <a href="mailto:Christopher@CafeRE.com" className={css`
+              color: rgb(69, 69, 69);`}>
             Christopher@CafeRE.com
           </a>
-          <a
-            href="/assets/resume.pdf"
-            download
-            id="btnResume"
-            className={css`
+          <a href="/assets/resume.pdf" download id="btnResume" className={css`
               border-radius: 3px;
               background-color: #bada55;
               padding: 5px 10px;
               margin-top: 5px;
               color: rgb(69, 69, 69);
-              box-shadow: 0px 1px 1px 0 rgba(69, 69, 69, 0.439);
-            `}
-          >
+              box-shadow: 0px 1px 1px 0 rgba(69, 69, 69, 0.439);`}>
             Download PDF
           </a>
         </div>
@@ -120,9 +103,10 @@ const Resume = () => {
           <p>
             With extensive experience in business development, marketing and
             education, Chris brings a deep understanding that code flows from
-            keyboards to customers, and how the requirements of the business and
-            its stakeholders ultimately need to intersect with the needs of the
-            client. This fuels his appreciation for user-driven development.
+            keyboards to customers, and how the requirements of the business
+            and its stakeholders ultimately need to intersect with the needs
+            of the client. This fuels his appreciation for user-driven
+            development.
           </p>
         </div>
         <div className="skills">
@@ -155,9 +139,9 @@ const Resume = () => {
             </a>
 
             <p>
-              A Personal portfolio site designed to showcase recent projects and
-              certifications. This was built using React v16 with Gatsby v2 and
-              styled with CSS-in-JS using the Emotion-JS library.{' '}
+              A Personal portfolio site designed to showcase recent projects
+              and certifications. This was built using React v16 with Gatsby
+              v2 and styled with CSS-in-JS using the Emotion-JS library.{' '}
             </p>
             <a href="http://www.ReCalcApp.com" target="_blank">
               <h4>www.RECalcApp.com – Jan 2017 – Nov 2017 </h4>
@@ -165,11 +149,14 @@ const Resume = () => {
 
             <p>
               An iOS app for Real Estate Professionals, to assist with common
-              math and date calculations. This was built in Xcode using Swift 4,
-              UIKit, CocoaPods and incorporates ads using AdMob from Google.
+              math and date calculations. This was built in Xcode using Swift
+              4, UIKit, CocoaPods and incorporates ads using AdMob from
+              Google.
             </p>
             <a href="http://www.RealEstateAcademyofOrlando.com" target="_blank">
-              <h4>www.RealEstateAcademyofOrlando.com – June 2016 – Present </h4>
+              <h4>
+                www.RealEstateAcademyofOrlando.com – June 2016 – Present{' '}
+              </h4>
             </a>
 
             <p>
@@ -181,52 +168,40 @@ const Resume = () => {
 
         <div>
           <div className="certificates">
-            <a
-              href="https://www.freecodecamp.org/alba-c"
-              target="_blank"
-              rel="noreferrer noopener"
-              className={css`
+            <a href="https://www.freecodecamp.org/alba-c" target="_blank" rel="noreferrer noopener" className={css`
                 cursor: pointer;
                 color: inherit;
+                text-decoration: none;
                 &:hover {
                   text-decoration: none;
                   color: inherit;
-                }
-              `}
-            >
+                }`}>
               <div>
                 <h3 className={``}>Certificates: </h3>
-                <span
-                  className={css`
+                <span className={css`
                     position: relative;
-                    top: -2.2rem;
+                    top: -3.2rem;
                     left: 180px;
-                    font-size: 1.1rem;
-                  `}
-                >
+                    font-size: 1.1rem;`}>
                   FCC | FreeCodeCamp.org
                 </span>
               </div>
 
-              <p
-                className={css`
-                  margin-top: -2rem;
-                `}
-              >
+              <p className={css`
+                  margin-top: -2rem;`}>
                 (approximately 300 hours per certificate)
               </p>
               <div className={cert}>
                 <h4>Responsive Web Design: </h4>
                 <span>
-                  HTML, CSS, Visual Design, A11Y, Responsive Design Principles,
-                  CSS Flexbox, CSS Grid, User Story Projects
+                  HTML, CSS, Visual Design, A11Y, Responsive Design
+                  Principles, CSS Flexbox, CSS Grid, User Story Projects
                 </span>
               </div>
               <div>
                 <h4>JavaScript Algorithms and Data Structures: </h4>
                 <div className={cert}>
-                  <div />{' '}
-                  <span>
+                  <div /> <span>
                     JavaScript, ES6, Regular Expressions, Debugging, Data
                     Structures, Algorithm Scripting, OOP, Functional
                     Programming, Intermediate Algorithm Scripting, User Story
@@ -244,8 +219,8 @@ const Resume = () => {
               <div className={cert}>
                 <h4>Data Visualization: </h4>
                 <span>
-                  Data Visualization with D3.js, JSON APIs and Ajax, User Story
-                  Projects
+                  Data Visualization with D3.js, JSON APIs and Ajax, User
+                  Story Projects
                 </span>
               </div>
               <div className={cert}>
@@ -274,7 +249,6 @@ const Resume = () => {
         </div>
       </div>
     </Layout>
-  )
 }
 
 export default Resume

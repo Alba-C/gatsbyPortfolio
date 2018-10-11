@@ -103,6 +103,7 @@ class Navbar extends Component {
       color: '#f2f2f2',
       textAlign: 'center',
       padding: '14px 16px',
+      textDecoration: 'none',
       // fontSize: '17px',
       '&:hover': {
         // backgroundColor: '#ddd',
