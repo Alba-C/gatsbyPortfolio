@@ -36,80 +36,54 @@ export default class Banner extends Component {
   }
 
   render() {
-    return (
-      <div className="">
-        <div
-          className={css`
+    return <div className="">
+        <div className={css`
             // className="banner"
             background-color: #f1f7ed;
             display: flex;
             font-size: 1.25em;
             flex-direction: column;
-            align-items: center;
-          `}
-        >
-          <img
-            src="./assets/IMG_BW7038.jpg"
-            width="150px"
-            alt="profile headshot"
-            className={css`
-              // className="avatar"
+            align-items: center;`}>
+          <img src="./assets/IMG_BW7038.jpg" width="150px" alt="profile headshot" className={css`
               border-radius: 50%;
               box-shadow: 2px 2px 4px rgba(20, 20, 20, 0.2);
               position: relative;
               top: 15px;
               display: block;
               margin: 0 auto;
-              margin-bottom: 20px;
-            `}
-          />
+              margin-bottom: 20px;`} />
           <h1>Chris Albanese</h1>
-          <div
-            className={css`
+          <div className={css`
               font-size: 1.25em;
               font-weight: 500;
-              margin-bottom: 1rem;
-            `}
-            id="makeThings"
-            onMouseEnter={this.mouseEnter}
-          >
+              text-align: center;
+              margin: 0 auto;
+              padding: 0 20px;
+              margin-bottom: 1rem;`} id="makeThings" onMouseEnter={this.mouseEnter}>
             Likes to
-            {this.state.thingsIdo === 'Make' ? (
-              <span
-                id="verbMake"
-                className={css`
+            {this.state.thingsIdo === 'Make' ? <span id="verbMake" className={css`
                   // className="verb"
                   display: inline-block;
                   border-radius: 3px;
                   color: white;
                   font-weight: 800;
-                  padding: 5px 10px;
+                  padding: 10px 15px;
                   margin: 0 5px;
                   font-family: 'Audiowide', cursive;
                   box-shadow: 0px 1px 5px 1px rgba(69, 69, 69, 0.639);
                   background-color: #bada55;
-                  transform: rotate(5deg);
-                `}
-              >
+                  transform: rotate(5deg);`}>
                 Make
-              </span>
-            ) : this.state.thingsIdo === 'Break' ? (
-              <div
-                id="break"
-                className={css`
+              </span> : this.state.thingsIdo === 'Break' ? <div id="break" className={css`
                   display: inline-block;
 
-                  filter: drop-shadow(5px 5px 5px rgba(69, 69, 69, 0.639));
-                `}
-              >
-                <span
-                  id="verbBreakL"
-                  className={css` // className="verb"
+                  filter: drop-shadow(5px 5px 5px rgba(69, 69, 69, 0.639));`}>
+                <span id="verbBreakL" className={css` // className="verb"
                   display: inline-block;
                   border-radius: 3px;
                   color: white;
                   font-weight: 800;
-                  padding: 5px 10px;
+                  padding: 10px 15px;
                   margin: 0 5px;
                   font-family: "Audiowide", cursive;
                   box-shadow: 0px 1px 5px 1px rgba(69, 69, 69, 0.639);
@@ -117,91 +91,59 @@ export default class Banner extends Component {
                   border-radius: 5px 0 0 5px;
                   border-right: 2px solid grey;
                   background-color: rgb(189, 59, 36);
-                  padding: 5px 0 5px 10px;
+                  padding: 9px 0 9px 15px;
                   transform: rotate(-5deg) 
                   box-shadow: 5px 0px 15px 1px rgba(0, 0, 0, 0.639);
                   clip-path: polygon(44% 0, 100% 0, 91% 12%, 100% 23%, 90% 37%, 95% 48%, 75% 73%, 93% 66%, 87% 76%, 100% 79%, 93% 99%, 1% 100%, 0% 1%);
               );
                   /* text-decoration: line-through; */
-                `}
-                >
+                `}>
                   Br
                 </span>
-                <span
-                  id="verbBreakR"
-                  className={css`
+                <span id="verbBreakR" className={css`
                     // className="verb"
                     display: inline-block;
                     border-radius: 3px;
                     color: white;
                     font-weight: 800;
-                    padding: 5px 10px;
                     margin: 0 5px;
-                    font-family: 'Audiowide', 'Franklin Gothic Medium',
-                      'Arial Narrow', 'Arial', 'sans-serif';
+                    font-family: 'Audiowide', 'Franklin Gothic Medium', 'Arial Narrow', 'Arial', 'sans-serif';
                     box-shadow: 0px 1px 5px 1px rgba(69, 69, 69, 0.639);
                     margin: 0 5px 0 2px;
                     border-radius: 0 5px 5px 0;
                     background-color: rgb(189, 59, 36);
-                    padding: 5px 10px 5px 0;
+                    padding: 10px 15px 10px 0;
                     transform: skew(-0.05turn, 10deg);
                     box-shadow: -5px 0px 15px 1px rgba(0, 0, 0, 0.639);
-                    clip-path: polygon(
-                      11% 9%,
-                      13% 1%,
-                      100% 0,
-                      100% 100%,
-                      1% 99%,
-                      6% 81%,
-                      1% 61%,
-                      10% 54%,
-                      0 36%,
-                      11% 26%,
-                      0 15%
-                    );
-                  `}
-                >
+                    clip-path: polygon(11% 9%, 13% 1%, 100% 0, 100% 100%, 1% 99%, 6% 81%, 1% 61%, 10% 54%, 0 36%, 11% 26%, 0 15%);`}>
                   eak
                 </span>
-              </div>
-            ) : (
-              <span
-                id="verbFix"
-                className={css`
+              </div> : <span id="verbFix" className={css`
                   // className="verb"
                   display: inline-block;
                   border-radius: 3px;
                   color: white;
                   font-weight: 800;
-                  padding: 5px 10px;
+                  padding: 10px 15px;
                   margin: 0 5px;
-                  font-family: 'Audiowide', 'Franklin Gothic Medium',
-                    'Arial Narrow', 'Arial', 'sans-serif';
+                  font-family: 'Audiowide', 'Franklin Gothic Medium', 'Arial Narrow', 'Arial', 'sans-serif';
                   box-shadow: 0px 1px 5px 1px rgba(69, 69, 69, 0.639);
-                  background-color: #82d8d8;
-                `}
-              >
+                  background-color: #82d8d8;`}>
                 Fix
-              </span>
-            )}
+              </span>}
             cool things
           </div>
-          <p
-            className={css`
+          <p className={css`
               text-align: center;
-            `}
-          >
+              padding: 0 20px;`}>
             Front End Developer based in Orlando, FL
           </p>
-          <p
-            className={css`
+          <p className={css`
               text-align: center;
-            `}
-          >
+              padding: 0 20px;`}>
             Specializing in responsive design with a clean modern asthetic
           </p>
         </div>
       </div>
-    )
   }
 }

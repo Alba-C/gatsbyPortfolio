@@ -25,9 +25,7 @@ const About = () => {
           independently, and led week-long training sessions. Above all, I
           love helping people bring their visions to life.
         </p>
-        <p>
-          When not working, I enjoy movies, cooking, hygge and discovering hidden jems around Orlando.
-        </p>
+        
         <p>
           I'm never scared of a challenge, and can find a solution to any
           problem you throw at me.

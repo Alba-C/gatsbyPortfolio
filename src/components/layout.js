@@ -51,7 +51,7 @@ const Layout = ({ children }) => (
             margin: 0 auto;
             max-width: 1200px;
             padding-top: 0;
-            /* z-index: 100; */
+            font-family: 'Montserrat', sans-serif;
             box-shadow: 0px 2px 14px 10px rgba(20, 20, 20, 0.1);
           `}
         >

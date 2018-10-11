@@ -30,8 +30,9 @@ const Contact = () => {
         Do you want to hire me? Need a consultation on a new project?
       </p>
       <p>
-        Perhaps, you need assistance moving a large sum of money internationally and require someone  who won't ask a lot
-        of questions. Whatever the reason, don't be shy. I'd love to hear from
+        Perhaps, you need assistance moving a large sum of money
+        internationally and require someone who won't ask a lot of questions.
+        ¯\_(ツ)_/¯ Whatever the reason, don't be shy. I'd love to hear from
         you.
       </p>
       <form name="contactForm" method="POST" netlify netlify-honeypot="bot-field" className={css`

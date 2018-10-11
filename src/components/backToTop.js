@@ -37,7 +37,7 @@ class BackToTop extends Component {
     window.addEventListener('scroll', this.handleScroll.bind(this))
   }
   componentWillUnmount = () => {
-    window.removeEventListener('scroll')
+      window.removeEventListener('scroll', this.handleScroll.bind(this))
   }
 
   render() {
