@@ -1,6 +1,6 @@
 <p align="center">
-  <a href="http//www.ChristopherAlbanese.com">
-    <img alt="Logo" src="../public/icons/icon-96x96.png" width="60" />
+  <a href="http://www.ChristopherAlbanese.com" target="_blank">
+    <img alt="Logo" src="/icons/icon-96x96.png" width="60" />
   </a>
 </p>
 <h1 align="center">
