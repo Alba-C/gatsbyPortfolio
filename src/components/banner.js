@@ -128,7 +128,7 @@ export default class Banner extends Component {
                   margin: 0 5px;
                   font-family: 'Audiowide', 'Franklin Gothic Medium', 'Arial Narrow', 'Arial', 'sans-serif';
                   box-shadow: 0px 1px 5px 1px rgba(69, 69, 69, 0.639);
-                  background-color: #82d8d8;`}>
+                  background-color: #002851;`}>
                 Fix
               </span>}
             cool things

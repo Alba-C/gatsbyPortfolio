@@ -19,7 +19,7 @@ const Contact = () => {
         font-size: 1.15em;
         display: flex;
         flex-direction: column;
-        padding: 25px 50px 50px 50px;`} id="contact">
+        padding: 25px 50px 50px 50px;`} id="contactSect">
       <h2 className={css`
           text-align: center;`}>
         Contact Me
@@ -49,11 +49,11 @@ const Contact = () => {
             justify-content: center;
             flex-wrap: wrap;
             @media (max-width: 535px) {justify-content: flex-start;}`}>
-          <label className={css`
+          <label for="name" className={css`
               width: 115px;`}>
             Your Name:
           </label>
-          <input type="text" name="name" required placeholder=" your name" className={css`
+          <input type="text" name="name" id="name"  required placeholder=" your name" className={css`
               width: 70%;
               margin-left: 15px;
               border-radius: 5px;
@@ -65,11 +65,11 @@ const Contact = () => {
             justify-content: center;
             flex-wrap: wrap;
             @media (max-width: 535px) {justify-content: flex-start;}`}>
-          <label className={css`
+          <label for="email" className={css`
               width: 115px;`}>
             Your Email:
           </label>
-          <input type="email" name="email" required placeholder=" your@email.com" className={css`
+          <input type="email" name="email" id="email" required placeholder=" your@email.com" className={css`
               width: 70%;
               margin-left: 15px;
               border-radius: 5px;
@@ -82,11 +82,11 @@ const Contact = () => {
             justify-content: center;
             flex-wrap: wrap;
             @media (max-width: 535px) {justify-content: flex-start;}`}>
-          <label className={css`
+          <label for="message" className={css`
               width: 115px;`}>
             Message:
           </label>
-          <textarea name="message" placeholder=" Let me know how I can help!" className={css`
+          <textarea name="message" id="message" placeholder=" Let me know how I can help!" className={css`
               border-radius: 5px;
               margin-left: 15px;
               width: 70%;
@@ -98,8 +98,8 @@ const Contact = () => {
         <p className={css`
             visibility: hidden;
             position: absolute;`}>
-          <label>
-            Don’t fill this out if you're human: <input name="bot-field" />
+          <label for="bot-field">
+            Don’t fill this out if you're human: <input name="bot-field" id="bot-field"/>
           </label>
         </p>
         <p className={css`

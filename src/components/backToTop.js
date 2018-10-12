@@ -37,12 +37,12 @@ class BackToTop extends Component {
     window.addEventListener('scroll', this.handleScroll.bind(this))
   }
   componentWillUnmount = () => {
-      window.removeEventListener('scroll', this.handleScroll.bind(this))
+    window.removeEventListener('scroll', this.handleScroll.bind(this))
   }
 
   render() {
     return (
-      <a href={this.state.anchor}>
+      <a href={this.state.anchor} aria-label="return to top">
         <div
           className={css`
             width: 50px;

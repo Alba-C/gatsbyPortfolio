@@ -1,6 +1,15 @@
 import React, { Component } from 'react'
 import { css } from 'emotion'
 
+const cardBottom = css`
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+  justify-content: space-between;
+  height: 100%;
+  padding: 0 5px;
+`
+
 class Projects extends Component {
   render() {
     return (
@@ -56,8 +65,10 @@ class Projects extends Component {
                 console.log(this.props.filterWord)
                 return (
                   project.keywords.indexOf(this.props.filterWord) !== -1 && (
-                    <div // className="project"
-                      key={i}
+                    <div
+                      key={
+                        i // className="project"
+                      }
                       className={css`
                         padding: 20px;
                         color: white;
@@ -89,7 +100,11 @@ class Projects extends Component {
                         >
                           {project.title}
                         </h2>
-                        <a href={project.link} target="blank">
+                        <a
+                          href={project.link}
+                          target="blank"
+                          aria-label={project.title}
+                        >
                           <img
                             src={project.image}
                             alt={project.title}
@@ -98,7 +113,7 @@ class Projects extends Component {
                           />
                         </a>
                       </div>
-                      <div className="cardBottom">
+                      <div className={cardBottom}>
                         <p className="projectDesc">{project.description}</p>
                         <div className="keywords">
                           <code>
@@ -147,17 +162,21 @@ class Projects extends Component {
                       >
                         {project.title}
                       </h2>
-                      <a href={project.link} target="blank">
+                      <a
+                        href={project.link}
+                        aria-label={project.title}
+                        target="blank"
+                      >
                         <img
                           src={project.image}
-                          alt=""
+                          alt={project.title}
                           width="100%"
                           className="projectImg"
                         />
                       </a>
                     </div>
-                    <div className="cardBottom">
-                      <p className="projectDesc">{project.description}</p>
+                    <div className={cardBottom}>
+                      <p className={css`text-align: left`}>{project.description}</p>
                       <div className="keywords">
                         <code>
                           {' '}

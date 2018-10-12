@@ -26,6 +26,7 @@ let projectData = [
       'JSX',
       'CSS',
       'Flexbox',
+      'CSS Grid',
       'CSS Animation',
       'HTML',
       'Audio',
@@ -167,7 +168,7 @@ let projectData = [
     description:
       'Write Markdown in the editor and see it rendered on the right.  Uses the MarkedJS Library to compile to HTML.',
     link: 'https://codepen.io/Alba-C/full/ZjBvwY/',
-    keywords: ['HTML', 'FlexBox', 'JavaScript', 'CSS', 'Responsive'],
+    keywords: ['HTML', 'Flexbox', 'JavaScript', 'CSS', 'Responsive'],
   },
   {
     image: './assets/technicalDocument400x300.png',
@@ -227,6 +228,8 @@ let projectData = [
       'CSS-in-JS',
       'Responsive',
       'Websites',
+      'JavaScript',
+      'Flexbox'
     ],
   },
   {

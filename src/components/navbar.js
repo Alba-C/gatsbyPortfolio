@@ -70,11 +70,7 @@ class Navbar extends Component {
       margin: '12px auto',
       height: '100%',
       paddingRight: 88,
-      // '@media (max-width: 600px)': {
-      //   display: 'block',
-      //   // float: 'none',
-      //   // textAlign: 'right',
-      // },
+    
     })
 
     const menuBtn = css({
@@ -141,7 +137,11 @@ class Navbar extends Component {
             <Link to="/#projects" className={topnavA} onClick={this.closeMenu}>
               Projects
             </Link>
-            <Link to="/#contact" className={topnavA} onClick={this.closeMenu}>
+            <Link
+              to="/#contactSect"
+              className={topnavA}
+              onClick={this.closeMenu}
+            >
               Contact
             </Link>
             <Link to="/#about" className={topnavA} onClick={this.closeMenu}>
@@ -151,7 +151,11 @@ class Navbar extends Component {
               Resume
             </Link>
           </div>
-          <button className={menuBtn} onClick={this.handleClick}>
+          <button
+            className={menuBtn}
+            aria-label="menu toggle"
+            onClick={this.handleClick}
+          >
             <Hamburger
               collapsed={this.state.collapsed}
               size={40}
@@ -177,9 +181,9 @@ class Hamburger extends Component {
   size = this.props.size
 
   // used to simulate a click from an outer component
-  handleClick = () => {
-    this.setState({ collapsed: !this.state.collapsed })
-  }
+  // handleClick = () => {
+  //   this.setState({ collapsed: !this.state.collapsed })
+  // }
   // use this to get the button click from the navBar component
   static getDerivedStateFromProps(nextProps, prevState) {
     if (nextProps.collapsed !== prevState.collapsed) {
