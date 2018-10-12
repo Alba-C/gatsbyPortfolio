@@ -9,7 +9,9 @@ const Resume = () => {
     background-color: rgb(242, 242, 242);
     padding: 25px 45px 50px 45px;
     font-size: 0.9em;
-
+    a {
+      text-decoration: none;
+    }
     h1,
     h2,
     h3,
@@ -180,15 +182,16 @@ const Resume = () => {
                 <h3 className={``}>Certificates: </h3>
                 <span className={css`
                     position: relative;
-                    top: -3.2rem;
-                    left: 180px;
+                    font-style: italic;
+                    top: -3.1rem;
+                    left: 160px;
                     font-size: 1.1rem;`}>
                   FCC | FreeCodeCamp.org
                 </span>
               </div>
 
               <p className={css`
-                  margin-top: -2rem;`}>
+                  margin-top: -3rem;`}>
                 (approximately 300 hours per certificate)
               </p>
               <div className={cert}>
