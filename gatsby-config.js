@@ -21,7 +21,7 @@ module.exports = {
         background_color: '#283044',
         theme_color: '#283044',
         display: 'minimal-ui',
-        icon: 'public/static/assets/CA-Logo.png', // This path is relative to the root of the site.
+        icon: 'src/images/CA-Logo.png', // This path is relative to the root of the site.
       },
     },
 
