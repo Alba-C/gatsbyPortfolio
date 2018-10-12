@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 
 import Layout from '../components/layout'
-import keywordArr from '../Data/keywordArr'
+import keywordArr from '../data/keywordArr'
 import Keywords from '../components/Keywords'
-import projectData from '../Data/projectData'
+import projectData from '../data/projectData'
 import Projects from '../components/Projects'
 import Banner from '../components/banner'
 import Contact from '../components/contact'
