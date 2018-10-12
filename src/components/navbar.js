@@ -70,7 +70,6 @@ class Navbar extends Component {
       margin: '12px auto',
       height: '100%',
       paddingRight: 88,
-    
     })
 
     const menuBtn = css({
@@ -134,17 +133,13 @@ class Navbar extends Component {
             )}
           </Link>
           <div className={linkContainer}>
-            <Link to="/#projects" className={topnavA} onClick={this.closeMenu}>
+            <Link to="#projects" className={topnavA} onClick={this.closeMenu}>
               Projects
             </Link>
-            <Link
-              to="/#contactSect"
-              className={topnavA}
-              onClick={this.closeMenu}
-            >
+            <Link to="#contact" className={topnavA} onClick={this.closeMenu}>
               Contact
             </Link>
-            <Link to="/#about" className={topnavA} onClick={this.closeMenu}>
+            <Link to="#about"  className={topnavA} onClick={this.closeMenu}>
               About
             </Link>
             <Link to="/resume" className={topnavA} onClick={this.closeMenu}>

@@ -8,7 +8,7 @@ const About = () => {
           font-size: 1.15em;
           display: flex;
           flex-direction: column;
-          padding: 25px 50px;`} id="contact">
+          padding: 25px 50px;`} >
         <h2 className={css`
             text-align: center;`}>
           Hi, I'm Chris.

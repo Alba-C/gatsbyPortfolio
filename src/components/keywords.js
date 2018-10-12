@@ -2,8 +2,11 @@ import React from 'react'
 import { css } from 'react-emotion'
 
 const Keywords = props => {
-  return <section>
-      <ul id="keyList" className={css`
+  return (
+    <section>
+      <ul
+        id="keyList"
+        className={css`
           display: flex;
           flex-wrap: wrap;
           margin: 0;
@@ -11,9 +14,15 @@ const Keywords = props => {
           list-style: none;
           background-color: #78a1bb;
           background-color: #c0e0de;
-          font-family: 'Montserrat', sans-serif;`}>
-        {props.keywords.map(key => <li key={key}>
-            <a href="#" onClick={props.keywordClick} className={css`
+          font-family: 'Montserrat', sans-serif;
+        `}
+      >
+        {props.keywords.map(key => (
+          <li key={key}>
+            <a
+              href="#"
+              onClick={props.keywordClick}
+              className={css`
                 background-color: #bada55;
                 color: rgb(69, 69, 69);
                 display: inline-block;
@@ -33,12 +42,20 @@ const Keywords = props => {
                   text-decoration: none;
                   color: rgb(69, 69, 69);
                   font-weight: bold;
-                }`} style={{ color: props.filterWord === key && '#555', backgroundColor: props.filterWord === key && '#82D8D8' }}>
+                }
+              `}
+              style={{
+                color: props.filterWord === key && '#555',
+                backgroundColor: props.filterWord === key && '#82D8D8',
+              }}
+            >
               {key}
             </a>
-          </li>)}
+          </li>
+        ))}
       </ul>
     </section>
+  )
 }
 
 export default Keywords

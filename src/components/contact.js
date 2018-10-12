@@ -19,7 +19,7 @@ const Contact = () => {
         font-size: 1.15em;
         display: flex;
         flex-direction: column;
-        padding: 25px 50px 50px 50px;`} id="contactSect">
+        padding: 25px 50px 50px 50px;`} id="contact">
       <h2 className={css`
           text-align: center;`}>
         Contact Me
