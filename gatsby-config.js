@@ -2,6 +2,7 @@ module.exports = {
   siteMetadata: {
     title: 'Chris Albanese | Front End Developer ',
   },
+  pathPrefix: '/',
   plugins: [
     'gatsby-plugin-react-helmet',
     // {
@@ -20,9 +21,10 @@ module.exports = {
         background_color: '#283044',
         theme_color: '#283044',
         display: 'minimal-ui',
-        icon: '/public/assets/CA-Logo.png', // This path is relative to the root of the site.
+        icon: 'public/static/assets/CA-Logo.png', // This path is relative to the root of the site.
       },
     },
+
     'gatsby-plugin-offline',
   ],
 }

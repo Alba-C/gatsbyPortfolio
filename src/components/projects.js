@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { withPrefix } from 'gatsby'
 import { css } from 'emotion'
 
 const cardBottom = css`
@@ -168,7 +169,8 @@ class Projects extends Component {
                         target="blank"
                       >
                         <img
-                          src={project.image}
+                          // src={project.image}
+                          src={withPrefix(project.image)}
                           alt={project.title}
                           width="100%"
                           className="projectImg"

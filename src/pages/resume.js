@@ -1,5 +1,6 @@
 import React from 'react'
 import { css } from 'react-emotion'
+import { withPrefix } from 'gatsby'
 import Layout from '../components/layout'
 
 const Resume = () => {
@@ -90,7 +91,7 @@ const Resume = () => {
               color: rgb(69, 69, 69);`}>
             Christopher@CafeRE.com
           </a>
-          <a href="/assets/resume.pdf" download id="btnResume" className={css`
+          <a href={withPrefix("/static/assets/resume.pdf")} download id="btnResume" className={css`
               border-radius: 3px;
               background-color: #bada55;
               padding: 5px 10px;

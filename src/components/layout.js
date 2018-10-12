@@ -6,6 +6,8 @@ import { css } from 'emotion'
 
 import Header from './header'
 import Footer from './footer'
+import { withPrefix } from 'gatsby'
+
 import './layout.css'
 
 const Layout = ({ children }) => (
@@ -22,7 +24,7 @@ const Layout = ({ children }) => (
     render={data => (
       <div
         className={css`
-          background-image: url('/assets/dark_exa.png');
+          background-image: url('/static/assets/dark_exa.png');
           background-repeat: repeat;
           font-family: 'Montserrat', sans-serif;
         `}

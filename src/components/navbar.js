@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { css } from 'emotion'
-import { Link } from 'gatsby'
+import { Link, withPrefix } from 'gatsby'
 //import Hamburger from '/src/components/hamburger'
 
 class Navbar extends Component {
@@ -121,7 +121,7 @@ class Navbar extends Component {
           <Link to="/" onClick={this.closeMenu} className={navBrand}>
             {this.state.collapsed ? (
               <img
-                src="/assets/CA-Logo.png"
+                src={withPrefix('/static/assets/CA-Logo.png')}
                 alt="logo"
                 className={css`
                   margin-bottom: 0;

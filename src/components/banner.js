@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { css } from 'react-emotion'
+import { withPrefix } from 'gatsby'
 
 export default class Banner extends Component {
   constructor(props) {
@@ -44,7 +45,8 @@ export default class Banner extends Component {
             font-size: 1.25em;
             flex-direction: column;
             align-items: center;`}>
-          <img src="./assets/IMG_BW7038.jpg" width="150px" alt="profile headshot" className={css`
+        <img src={withPrefix('/static/assets/IMG_BW7038.jpg')}
+          width="150px" alt="profile headshot" className={css`
               border-radius: 50%;
               box-shadow: 2px 2px 4px rgba(20, 20, 20, 0.2);
               position: relative;
