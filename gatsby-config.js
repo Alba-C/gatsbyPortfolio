@@ -31,8 +31,8 @@ module.exports = {
       resolve: 'gatsby-plugin-offline',
       options: {
         importWorkboxFrom: `local`,
-        globDirectory: rootDir,
-        globPatterns,
+        // globDirectory: rootDir,
+        // globPatterns,
         // modifyUrlPrefix: {
         //   rootDir: ``,
         //   // If `pathPrefix` is configured by user, we should replace
