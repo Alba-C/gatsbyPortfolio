@@ -63,7 +63,6 @@ class Projects extends Component {
         >
           {this.props.filterWord
             ? this.props.projectData.map((project, i) => {
-                console.log(this.props.filterWord)
                 return (
                   project.keywords.indexOf(this.props.filterWord) !== -1 && (
                     <div
@@ -178,7 +177,13 @@ class Projects extends Component {
                       </a>
                     </div>
                     <div className={cardBottom}>
-                      <p className={css`text-align: left`}>{project.description}</p>
+                      <p
+                        className={css`
+                          text-align: left;
+                        `}
+                      >
+                        {project.description}
+                      </p>
                       <div className="keywords">
                         <code>
                           {' '}

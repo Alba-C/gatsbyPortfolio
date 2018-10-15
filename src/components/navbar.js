@@ -136,12 +136,12 @@ class Navbar extends Component {
             <Link to="#projects" className={topnavA} onClick={this.closeMenu}>
               Projects
             </Link>
-            <Link to="#contact" className={topnavA} onClick={this.closeMenu}>
-              Contact
-            </Link>
-            <Link to="#about"  className={topnavA} onClick={this.closeMenu}>
+            <Link to="#about" className={topnavA} onClick={this.closeMenu}>
               About
             </Link>
+            <a to="/#contact" className={topnavA} onClick={this.closeMenu}>
+              Contact
+            </a>
             <Link to="/resume" className={topnavA} onClick={this.closeMenu}>
               Resume
             </Link>

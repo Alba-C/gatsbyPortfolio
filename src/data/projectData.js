@@ -216,7 +216,7 @@ let projectData = [
     keywords: ['Wordpress', 'CSS', 'Responsive', 'Websites'],
   },
   {
-    image: './assets/caPortfolio400x300.png',
+    image: '/static/assets/caPortfolio400x300.png',
     title: 'Web Dev Portfolio',
     description:
       'My personal portfolio site, built using Gatsby, React and CSS-in-JS using Emotion',
@@ -233,7 +233,7 @@ let projectData = [
     ],
   },
   {
-    image: `/static/assets/spotAutoVolume400x300.png'`,
+    image: '/static/assets/spotAutoVolume400x300.png',
     title: 'Spotify Auto Volume',
     description:
       'Node JS app that listens for ads on the Spotify Mac App and automatically lowers the volume until the ads end.',
