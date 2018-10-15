@@ -33,12 +33,12 @@ module.exports = {
         importWorkboxFrom: `local`,
         globDirectory: rootDir,
         globPatterns,
-        modifyUrlPrefix: {
-          rootDir: ``,
-          // If `pathPrefix` is configured by user, we should replace
-          // the default prefix with `pathPrefix`.
-          '': args.pathPrefix || ``,
-        },
+        // modifyUrlPrefix: {
+        //   rootDir: ``,
+        //   // If `pathPrefix` is configured by user, we should replace
+        //   // the default prefix with `pathPrefix`.
+        //   '': args.pathPrefix || ``,
+        // },
         navigateFallback: `/offline-plugin-app-shell-fallback/index.html`,
         // Only match URLs without extensions or the query `no-cache=1`.
         // So example.com/about/ will pass but
