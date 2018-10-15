@@ -1,8 +1,8 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
+  "name": "Chris Albanese Portfolio",
+  "description": "Personal Web Dev Portfolio for Christopher Albanese ",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Chris Albanese <christopher@cafere.com>",
   "dependencies": {
     "emotion": "^9.2.12",
     "emotion-server": "^9.2.12",
