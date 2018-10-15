@@ -35,7 +35,7 @@ const Contact = () => {
         ¯\_(ツ)_/¯ Whatever the reason, don't be shy. I'd love to hear from
         you.
       </p>
-      <form name="contactForm" method="POST" netlify netlify-honeypot="bot-field" className={css`
+      <form name="contactForm" method="POST" netlify data-netlify="true" netlify-honeypot="bot-field" className={css`
           font-size: 1rem;
           display: flex;
           flex-direction: column;
