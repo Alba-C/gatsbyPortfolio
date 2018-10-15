@@ -139,7 +139,7 @@ class Navbar extends Component {
             <Link to="#about" className={topnavA} onClick={this.closeMenu}>
               About
             </Link>
-            <a to="/#contact" className={topnavA} onClick={this.closeMenu}>
+            <a href="/#contact" className={topnavA} onClick={this.closeMenu}>
               Contact
             </a>
             <Link to="/resume" className={topnavA} onClick={this.closeMenu}>
