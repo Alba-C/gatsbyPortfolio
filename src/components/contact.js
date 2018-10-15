@@ -49,7 +49,6 @@ const Contact = () => {
         name="contactForm"
         method="POST"
         action="/no-cache=1"
-        netlify
         data-netlify="true"
         netlify-honeypot="bot-field"
         className={css`
