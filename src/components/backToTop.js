@@ -40,53 +40,56 @@ class BackToTop extends Component {
     window.removeEventListener('scroll', this.handleScroll.bind(this))
   }
 
+  toTop = () => {
+    window.scrollTo(0, 0)
+  }
   render() {
     return (
-      <a href={this.state.anchor} aria-label="return to top">
+      <div
+        onClick={this.toTop}
+        aria-label="return to top"
+        className={css`
+          width: 50px;
+          height: 50px;
+          position: fixed;
+          right: 10px;
+          bottom: 20px;
+          display: flex;
+          align-items: center;
+          border-radius: 5px;
+          transition: all 0.3s ease 0s;
+          background-color: ${this.state.bgColor};
+          visibility: ${this.state.showBackToTop ? 'visible' : 'hidden'};
+          opacity: ${this.state.showBackToTop ? 1 : 0};
+        `}
+      >
         <div
           className={css`
-            width: 50px;
-            height: 50px;
-            position: fixed;
-            right: 10px;
-            bottom: 20px;
-            display: flex;
-            align-items: center;
+            background-color: ${this.state.arrowColor};
+            height: 50%;
+            width: 75%;
+            margin: 0px auto;
+            box-shadow: 0px 0px 14px 10px rgba(20, 20, 20, 0.1);
             border-radius: 5px;
-            transition: all 0.3s ease 0s;
-            background-color: ${this.state.bgColor};
-            visibility: ${this.state.showBackToTop ? 'visible' : 'hidden'};
-            opacity: ${this.state.showBackToTop ? 1 : 0};
+            -webkit-clip-path: polygon(
+              0% 50%,
+              50% 0%,
+              100% 50%,
+              100% 100%,
+              50% 50%,
+              0% 100%
+            );
+            clip-path: polygon(
+              0% 50%,
+              50% 0%,
+              100% 50%,
+              100% 100%,
+              50% 50%,
+              0% 100%
+            );
           `}
-        >
-          <div
-            className={css`
-              background-color: ${this.state.arrowColor};
-              height: 50%;
-              width: 75%;
-              margin: 0px auto;
-              box-shadow: 0px 0px 14px 10px rgba(20, 20, 20, 0.1);
-              border-radius: 5px;
-              -webkit-clip-path: polygon(
-                0% 50%,
-                50% 0%,
-                100% 50%,
-                100% 100%,
-                50% 50%,
-                0% 100%
-              );
-              clip-path: polygon(
-                0% 50%,
-                50% 0%,
-                100% 50%,
-                100% 100%,
-                50% 50%,
-                0% 100%
-              );
-            `}
-          />
-        </div>{' '}
-      </a>
+        />
+      </div>
     )
   }
 }

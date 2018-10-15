@@ -30,7 +30,7 @@ const footer = () => {
           padding-top: 0;
           /* z-index: 100; */
           /* box-shadow: 0px 2px 14px 10px rgba(20, 20, 20, 0.1); */`}>
-        <a href="#top" aria-label="return to top" className={css`
+        <div onClick={()=>window.scroll(0,0)} aria-label="return to top" className={css`
             height: 100px;
             width: 150px;
             border-radius: 50%;
@@ -54,7 +54,7 @@ const footer = () => {
               border-radius: 5px;
               -webkit-clip-path: polygon(0% 50%, 50% 0%, 100% 50%, 100% 100%, 50% 50%, 0% 100%);
               clip-path: polygon(0% 50%, 50% 0%, 100% 50%, 100% 100%, 50% 50%, 0% 100%);`} />
-        </a>
+        </div>
         <div className={linkContainer}>
           <a href="https://codepen.io/Alba-C/" target="_blank" rel="noopener noreferrer">
             <img src="/icons/codepenlogo.png" alt="codepen logo" className={css`

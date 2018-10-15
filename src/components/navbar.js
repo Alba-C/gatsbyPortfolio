@@ -133,12 +133,12 @@ class Navbar extends Component {
             )}
           </Link>
           <div className={linkContainer}>
-            <Link to="#projects" className={topnavA} onClick={this.closeMenu}>
+            <a href="#projects" className={topnavA} onClick={this.closeMenu}>
               Projects
-            </Link>
-            <Link to="#about" className={topnavA} onClick={this.closeMenu}>
+            </a>
+            <a href="#about" className={topnavA} onClick={this.closeMenu}>
               About
-            </Link>
+            </a>
             <a href="/#contact" className={topnavA} onClick={this.closeMenu}>
               Contact
             </a>
