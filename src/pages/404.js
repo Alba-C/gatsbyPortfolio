@@ -8,19 +8,23 @@ const NotFoundPage = () => (
       className={css`
         background-color: #f1f7ed;
         background: -webkit-radial-gradient(bottom, red, yellow, green);
-        background: radial-gradient(at bottom, black, #f1f7ed);
-        color: black;
+        background: radial-gradient(at bottom, black, #3a3838);
+        color: rgb(255, 230, 0);
         height: 83vh;
         padding: 50px;
+        text-align: center;
+        a {
+          color: yellow;
+        }
       `}
     >
-      <h1>Uh oh! You really did it this time!</h1>
+      <h1>Houston! We have a problem.</h1>
       <h2>You looked for a page that doesn't exist.</h2>
-      <h3>And got the Ol' 404 error!</h3>
-      <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+      <a href="/">return home</a>
+      <br />
 
       <img
-        src="/assets/spaceMan.png"
+        src="/static/assets/spaceMan.png"
         alt=""
         className={css`
           margin: 0 auto;
