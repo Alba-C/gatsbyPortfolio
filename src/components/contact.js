@@ -14,44 +14,28 @@ const form = css({
 })
 
 const Contact = () => {
-  return (
-    <section
-      className={css`
+  return <section className={css`
         background-color: #c0e0de;
         font-size: 1.15em;
         display: flex;
         flex-direction: column;
-        padding: 25px 50px 50px 50px;
-      `}
-      id="contact"
-    >
-      <h2
-        className={css`
-          text-align: center;
-        `}
-      >
+        padding: 25px 50px 50px 50px;`} id="contact">
+      <h2 className={css`
+          text-align: center;`}>
         Contact Me
       </h2>
-      <p
-        className={css`
+      <p className={css`
           text-align: center;
-          font-weight: bold;
-        `}
-      >
+          font-weight: bold;`}>
         Do you want to hire me? Need a consultation on a new project?
       </p>
       <p>
-        Perhaps, you need assistance moving a large sum of money internationally
-        and require someone who won't ask a lot of questions. ¯\_(ツ)_/¯
-        Whatever the reason, don't be shy. I'd love to hear from you.
+        Perhaps, you need assistance moving a large sum of money
+        internationally and require someone who won't ask a lot of questions.
+        ¯\_(ツ)_/¯ Whatever the reason, don't be shy. I'd love to hear from
+        you.
       </p>
-      <form
-        name="contactForm"
-        method="POST"
-        action="/formSuccess"
-        data-netlify="true"
-        netlify-honeypot="bot-field"
-        className={css`
+      <form name="contactForm" method="POST" action="/formSuccess" data-netlify="true" netlify-honeypot="bot-field" className={css`
           font-size: 1rem;
           display: flex;
           flex-direction: column;
@@ -59,147 +43,75 @@ const Contact = () => {
           background-color: #f1f7ed;
           padding: 30px;
           margin: 0 -15px;
-          border-radius: 5px;
-        `}
-      >
-        <p
-          className={css`
+          border-radius: 5px;`}>
+        <input type="hidden" name="contactForm" value="contactForm" />
+        <p className={css`
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            @media (max-width: 535px) {
-              justify-content: flex-start;
-            }
-          `}
-        >
-          <label
-            for="name"
-            className={css`
-              width: 115px;
-            `}
-          >
+            @media (max-width: 535px) {justify-content: flex-start;}`}>
+          <label for="name" className={css`
+              width: 115px;`}>
             Your Name:
           </label>
-          <input
-            type="text"
-            name="name"
-            id="name"
-            required
-            placeholder=" your name"
-            className={css`
+          <input type="text" name="name" id="name" required placeholder=" your name" className={css`
               width: 70%;
               margin-left: 15px;
               border-radius: 5px;
-              @media (max-width: 535px) {
-                width: 90%;
-                margin-left: 0;
-              }
-            `}
-          />
+              @media (max-width: 535px) {width: 90%;
+                margin-left: 0;}`} />
         </p>
-        <p
-          className={css`
+        <p className={css`
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            @media (max-width: 535px) {
-              justify-content: flex-start;
-            }
-          `}
-        >
-          <label
-            for="email"
-            className={css`
-              width: 115px;
-            `}
-          >
+            @media (max-width: 535px) {justify-content: flex-start;}`}>
+          <label for="email" className={css`
+              width: 115px;`}>
             Your Email:
           </label>
-          <input
-            type="email"
-            name="email"
-            id="email"
-            required
-            placeholder=" your@email.com"
-            className={css`
+          <input type="email" name="email" id="email" required placeholder=" your@email.com" className={css`
               width: 70%;
               margin-left: 15px;
               border-radius: 5px;
-              @media (max-width: 535px) {
-                width: 90%;
-                margin-left: 0;
-              }
-            `}
-          />
+              @media (max-width: 535px) {width: 90%;
+                margin-left: 0;}`} />
         </p>
 
-        <p
-          className={css`
+        <p className={css`
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            @media (max-width: 535px) {
-              justify-content: flex-start;
-            }
-          `}
-        >
-          <label
-            for="message"
-            className={css`
-              width: 115px;
-            `}
-          >
+            @media (max-width: 535px) {justify-content: flex-start;}`}>
+          <label for="message" className={css`
+              width: 115px;`}>
             Message:
           </label>
-          <textarea
-            name="message"
-            id="message"
-            placeholder=" Let me know how I can help!"
-            className={css`
+          <textarea name="message" id="message" placeholder=" Let me know how I can help!" className={css`
               border-radius: 5px;
               margin-left: 15px;
               width: 70%;
               min-height: 10vw;
-              @media (max-width: 535px) {
-                width: 90%;
+              @media (max-width: 535px) {width: 90%;
                 height: 50vw;
-                margin-left: 0;
-              }
-            `}
-          />
+                margin-left: 0;}`} />
         </p>
-        <p
-          className={css`
+        <p className={css`
             visibility: hidden;
-            position: absolute;
-          `}
-        >
+            position: absolute;`}>
           <label for="bot-field">
-            Don’t fill this out if you're human:{' '}
-            <input name="bot-field" id="bot-field" />
+            Don’t fill this out if you're human: <input name="bot-field" id="bot-field" />
           </label>
         </p>
-        <p
-          className={css`
+        <p className={css`
             display: flex;
             justify-content: center;
             flex-wrap: wrap;
-            @media (max-width: 535px) {
-              justify-content: flex-start;
-            }
-          `}
-        >
-          <span
-            className={css`
+            @media (max-width: 535px) {justify-content: flex-start;}`}>
+          <span className={css`
               width: 70%;
-              @media (max-width: 564px) {
-                display: none;
-              }
-            `}
-          />
-          <button
-            type="submit"
-            className={css`
+              @media (max-width: 564px) {display: none;}`} />
+          <button type="submit" className={css`
               width: 130px;
               border-radius: 5px;
               background-color: #bada55;
@@ -212,19 +124,14 @@ const Contact = () => {
               &:hover {
                 background-color: #82d8d8;
               }
-              @media (max-width: 563px) {
-                /* width: 70%; */
+              @media (max-width: 563px) {/* width: 70%; */
 
-                /* margin: 0 auto; */
-              }
-            `}
-          >
+                /* margin: 0 auto; */}`}>
             Send It
           </button>
         </p>
       </form>
     </section>
-  )
 }
 
 export default Contact
