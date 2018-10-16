@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { css } from 'react-emotion'
+import Chevron from '../components/chevron'
 
 class BackToTop extends Component {
   constructor(props) {
@@ -44,11 +45,7 @@ class BackToTop extends Component {
     window.scrollTo(0, 0)
   }
   render() {
-    return (
-      <div
-        onClick={this.toTop}
-        aria-label="return to top"
-        className={css`
+    return <div onClick={this.toTop} aria-label="return to top" className={css`
           width: 50px;
           height: 50px;
           position: fixed;
@@ -56,14 +53,18 @@ class BackToTop extends Component {
           bottom: 20px;
           display: flex;
           align-items: center;
+          justify-content: center;
           border-radius: 5px;
           transition: all 0.3s ease 0s;
           background-color: ${this.state.bgColor};
           visibility: ${this.state.showBackToTop ? 'visible' : 'hidden'};
           opacity: ${this.state.showBackToTop ? 1 : 0};
-        `}
-      >
-        <div
+          &:hover {
+            background-color: #bada55;
+          }
+          `}>
+        <Chevron bgColor="white" width="40" />
+        {/* <div
           className={css`
             background-color: ${this.state.arrowColor};
             height: 50%;
@@ -88,9 +89,8 @@ class BackToTop extends Component {
               0% 100%
             );
           `}
-        />
+        /> */}
       </div>
-    )
   }
 }
 

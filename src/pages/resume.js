@@ -137,7 +137,7 @@ const Resume = () => {
         <div>
           <div className="experience">
             <h3>Relevant Experience </h3>
-            <a href="http://www.ChristopherAlbanese.com" target="_blank">
+          <a href="http://www.ChristopherAlbanese.com" target="_blank" rel="noopener noreferrer">
               <h4>www.ChristopherAlbanese.com - 2018 - present</h4>
             </a>
 
@@ -146,7 +146,7 @@ const Resume = () => {
               and certifications. This was built using React v16 with Gatsby
               v2 and styled with CSS-in-JS using the Emotion-JS library.{' '}
             </p>
-            <a href="http://www.ReCalcApp.com" target="_blank">
+          <a href="http://www.ReCalcApp.com" target="_blank" rel="noopener noreferrer">
               <h4>www.RECalcApp.com – Jan 2017 – Nov 2017 </h4>
             </a>
 
@@ -156,7 +156,7 @@ const Resume = () => {
               4, UIKit, CocoaPods and incorporates ads using AdMob from
               Google.
             </p>
-            <a href="http://www.RealEstateAcademyofOrlando.com" target="_blank">
+          <a href="http://www.RealEstateAcademyofOrlando.com" target="_blank" rel="noopener noreferrer">
               <h4>
                 www.RealEstateAcademyofOrlando.com – June 2016 – Present{' '}
               </h4>

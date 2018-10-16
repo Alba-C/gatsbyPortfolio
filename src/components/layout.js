@@ -6,8 +6,6 @@ import { css } from 'emotion'
 
 import Header from './header'
 import Footer from './footer'
-import { withPrefix } from 'gatsby'
-
 import './layout.css'
 
 const Layout = ({ children }) => (
