@@ -3,8 +3,7 @@ import { css } from 'react-emotion'
 
 const Keywords = props => {
   return (
-    <section>
-      <ul
+    <section     
         id="keyList"
         className={css`
           display: flex;
@@ -55,7 +54,7 @@ const Keywords = props => {
         ))
         // </li>
         }
-      </ul>
+     
     </section>
   )
 }

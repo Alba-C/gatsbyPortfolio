@@ -22,8 +22,7 @@ class Index extends Component {
   }
 
   keywordClick(e) {
-    console.log(e)
-    this.state.filterWord === e.target.innerText
+       this.state.filterWord === e.target.innerText
       ? this.setState({ filterWord: '' })
       : this.setState({ filterWord: e.target.innerText })
   }

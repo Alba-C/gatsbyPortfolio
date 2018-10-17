@@ -6,6 +6,7 @@ let projectData = [
     link: 'https://codepen.io/Alba-C/full/MBEbNz/',
     keywords: [
       'React',
+      'JSX',
       'CSS',
       'Flexbox',
       'CSS Grid',
@@ -224,6 +225,8 @@ let projectData = [
     keywords: [
       'Gatsby',
       'React',
+      'JSX',
+      'ES6',
       'Emotion',
       'CSS-in-JS',
       'Responsive',
@@ -238,7 +241,7 @@ let projectData = [
     description:
       'Node JS app that listens for ads on the Spotify Mac App and automatically lowers the volume until the ads end.',
     link: 'https://github.com/Alba-C/SpotifyAutoVolume',
-    keywords: ['Node JS', 'JavaScript'],
+    keywords: ['Node JS', 'JavaScript', 'ES6'],
   },
 ]
 export default projectData
