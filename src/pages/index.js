@@ -22,10 +22,10 @@ class Index extends Component {
   }
 
   keywordClick(e) {
-
-    this.state.filterWord === e.target.text
+    console.log(e)
+    this.state.filterWord === e.target.innerText
       ? this.setState({ filterWord: '' })
-      : this.setState({ filterWord: e.target.text })
+      : this.setState({ filterWord: e.target.innerText })
   }
 
   componentDidMount = () => {
