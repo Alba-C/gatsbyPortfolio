@@ -32,7 +32,7 @@ const Keywords = props => {
               font-weight: 800;
               margin-bottom: 5px;
               margin-right: 10px;
-              border-radius: 3px;
+              border-radius: 5px;
               padding: 5px 10px;
               transition: all 0.3s ease 0s;
               text-decoration: none;
