@@ -39,7 +39,7 @@ let projectData = [
     image: '/static/assets/calculator400x300.png',
     title: 'Calculator',
     description:
-      'Free Code Camp project workign with React, Flexbox, Key Events and math',
+      'Free Code Camp project working with React, Flexbox, Key Events and math',
     link: 'https://codepen.io/Alba-C/full/ajYGYb/',
     keywords: ['React', 'JSX', 'CSS', 'Flexbox', 'ES6', 'HTML', 'JavaScript'],
   },
@@ -220,7 +220,7 @@ let projectData = [
     image: '/static/assets/caPortfolio400x300.png',
     title: 'Web Dev Portfolio',
     description:
-      'My personal portfolio site, built using Gatsby, React and CSS-in-JS using Emotion',
+      'My personal portfolio site, built with Gatsby, React and CSS-in-JS using Emotion',
     link: 'http://www.peridotrealestate.com ',
     keywords: [
       'Gatsby',
