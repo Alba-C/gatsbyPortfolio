@@ -3,12 +3,19 @@ import { css } from 'react-emotion'
 
 const Keywords = props => {
   return (
-    <section     
+    <section
+      className={css`
+        background-color: #c0e0de;
+        padding: 20px 10px;
+      `}
+    >
+      <div
         id="keyList"
         className={css`
           display: flex;
           flex-wrap: wrap;
-          margin: 0;
+          max-width: 1200px;
+          margin: 0 auto;
           padding: 10px;
           list-style: none;
           background-color: #78a1bb;
@@ -16,9 +23,7 @@ const Keywords = props => {
           font-family: 'Montserrat', sans-serif;
         `}
       >
-        {props.keywords.map((
-          key // <li key={key}>
-        ) => (
+        {props.keywords.map(key => (
           <button
             key={key} // href="#"
             onClick={props.keywordClick}
@@ -51,10 +56,8 @@ const Keywords = props => {
           >
             {key}
           </button>
-        ))
-        // </li>
-        }
-     
+        ))}
+      </div>
     </section>
   )
 }

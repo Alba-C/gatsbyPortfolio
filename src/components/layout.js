@@ -22,8 +22,8 @@ const Layout = ({ children }) => (
     render={data => (
       <div
         className={css`
-          background-image: url('/static/assets/dark_exa.png');
-          background-repeat: repeat;
+          // background-image: url('/static/assets/dark_exa.png');
+          // background-repeat: repeat;
           font-family: 'Montserrat', sans-serif;
         `}
       >
@@ -49,10 +49,10 @@ const Layout = ({ children }) => (
           id="top"
           className={css`
             margin: 0 auto;
-            max-width: 1200px;
+            // max-width: 1200px;
             padding-top: 0;
             font-family: 'Montserrat', sans-serif;
-            box-shadow: 0px 2px 14px 10px rgba(20, 20, 20, 0.1);
+            // box-shadow: 0px 2px 14px 10px rgba(20, 20, 20, 0.1);
           `}
         >
           {children}

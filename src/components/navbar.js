@@ -39,7 +39,7 @@ class Navbar extends Component {
       fontSize: '1.25rem',
       overflow: 'hidden',
       backgroundColor: 'transparent',
-      boxShadow: '0 0 10px 0 black',
+      // boxShadow: '0 0 10px 0 black',
       zIndex: 999,
       display: 'flex',
       '@media (max-width: 600px)': {
