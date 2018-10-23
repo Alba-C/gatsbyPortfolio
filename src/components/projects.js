@@ -51,10 +51,10 @@ const cardBottom = css`
         transition: all .25s ease-out;
       h2 {
         position: relative;
-        padding: 10px;
+        padding: 15px 0;
         color: white;
         z-index: inherit;
-        font-size: 1.em;
+        font-size: 1.2em;
 
         top: 100%;
         text-align: center;
