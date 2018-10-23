@@ -4,6 +4,7 @@ let projectData = [
     title: 'Drum Machine',
     description: 'Free Code Camp project to demonstrate use of HTML5 Audio',
     link: 'https://codepen.io/Alba-C/full/MBEbNz/',
+    featured: true,
     keywords: [
       'React',
       'JSX',
@@ -22,6 +23,7 @@ let projectData = [
     description:
       'Free Code Camp project working wth setInterval() and HTML5 Audio',
     link: 'https://codepen.io/Alba-C/full/zLJpjW/',
+    featured: true,
     keywords: [
       'React',
       'JSX',

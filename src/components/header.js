@@ -9,6 +9,7 @@ const Header = ({ siteTitle }) => (
         background-color: #002851;
         margin-bottom: 0;
         z-index: 1;
+        font-family: 'Poller One';
       `}
     >
       <Navbar />

@@ -39,7 +39,7 @@ const Layout = ({ children }) => (
           ]}
         >
           <link
-            href="https://fonts.googleapis.com/css?family=Audiowide|Montserrat"
+            href="https://fonts.googleapis.com/css?family=Audiowide|Carter+One|Montserrat|Poller+One"
             rel="stylesheet"
           />
           <html lang="en" />
@@ -51,8 +51,13 @@ const Layout = ({ children }) => (
             margin: 0 auto;
             // max-width: 1200px;
             padding-top: 0;
-            font-family: 'Montserrat', sans-serif;
+            /* font-family: 'Montserrat', sans-serif; */
             // box-shadow: 0px 2px 14px 10px rgba(20, 20, 20, 0.1);
+            h1,
+            h2,
+            h3 {
+              font-family: 'Poller One';
+            }
           `}
         >
           {children}
