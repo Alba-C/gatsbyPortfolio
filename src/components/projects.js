@@ -132,7 +132,7 @@ const cardBottom = css`
         }
         .keywords {
           transform: rotateX(0deg);
-         
+          margin-bottom: -0.5em;
           transition: all 0.25s ease-out;
         }
         code {
