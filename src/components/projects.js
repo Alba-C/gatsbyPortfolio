@@ -16,7 +16,7 @@ const cardBottom = css`
      display: flex;
    }
    h2 {
-     font-size: 1.4em;
+     font-size: 1.3em;
    }
 
    @media (max-width: 759px) {
@@ -54,7 +54,7 @@ const cardBottom = css`
         padding: 10px;
         color: white;
         z-index: inherit;
-        font-size: 1.2em;
+        font-size: 1.em;
 
         top: 100%;
         text-align: center;
@@ -209,6 +209,12 @@ const cardTopHov = css`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  h2 {
+    font-size: 1.3em;
+    :hover {
+      display: none;
+    }
+  }
   @media (max-width: 759px) {
     h2 {
       display: none;
