@@ -82,7 +82,7 @@ const Contact = () => {
             `}
           >
             <label
-              for="name"
+              htmlFor="name"
               className={css`
                 width: 115px;
               `}
@@ -117,7 +117,7 @@ const Contact = () => {
             `}
           >
             <label
-              for="email"
+              htmlFor="email"
               className={css`
                 width: 115px;
               `}
@@ -153,7 +153,7 @@ const Contact = () => {
             `}
           >
             <label
-              for="message"
+              htmlFor="message"
               className={css`
                 width: 115px;
               `}
@@ -183,7 +183,7 @@ const Contact = () => {
               position: absolute;
             `}
           >
-            <label for="bot-field">
+            <label htmlFor="bot-field">
               Don’t fill this out if you're human:{' '}
               <input name="bot-field" id="bot-field" />
             </label>

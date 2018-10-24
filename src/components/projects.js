@@ -202,7 +202,7 @@ const outerCard = css`
   }
   }
 `
-const cardTopHov = css`
+const cardTop = css`
   pointer-events: inherit;
   transition: all 0.25s ease-in;
   display: flex;
@@ -223,24 +223,7 @@ const cardTopHov = css`
 `
 
 class Projects extends Component {
-  constructor(props) {
-    super(props)
-    this.myRef = React.createRef()
-  }
-
-  handleScroll = e => {
-    // let project = document.getElementsByClassName("outerCard")
-    // var rect = ReactDOM.findDOMNode(this).getBoundingClientRect()
-    // let offsetTop = this.instance.getBoundingClientRect().top
-    console.log(e.currentTarget)
-  }
-
-  componentDidMount = props => {
-    window.addEventListener('scroll', this.handleScroll.bind(this))
-  }
-  componentWillUnmount = () => {
-    window.removeEventListener('scroll', this.handleScroll.bind(this))
-  }
+  
   render() {
     return (
       <section className={css``}>
@@ -256,130 +239,68 @@ class Projects extends Component {
         >
           <h1
             className={css`
-              /* color: #82d8d8; */
+              margin-bottom: 0;
             `}
           >
-            Projects: {this.props.filterWord ? this.props.filterWord : 'All'}
+            Projects: {this.props.filterWord}
           </h1>
           <div
             id="projects"
             className={css`
               display: flex;
               flex-wrap: wrap;
-              // color: red;
               align-content: space-between;
               justify-content: space-between;
               padding: 10px;
               @media (max-width: 1174px) {
                 justify-content: space-around;
-                /* align-items: space-around; */
               }
             `}
           >
-            {this.props.filterWord
-              ? this.props.projectData.map((project, i) => {
-                  return (
-                    project.keywords.indexOf(this.props.filterWord) !== -1 && (
-                      <div
-                        key={
-                          i // className="project"
-                        }
-                        className={outerCard}
-                      >
-                        <div className={cardTopHov}>
-                          {/* <a
-                          href={project.link}
-                          aria-label={project.title}
-                          target="blank"
-                        > */}
-                          <img
-                            src={withPrefix(project.image)}
-                            alt={project.title}
-                            width="100%"
-                            className="projectImg"
-                          />
-                          {/* </a> */}
-                          <h2>{project.title}</h2>
-                        </div>
+            {this.props.projectData.map((project, i) => {
+              return (
+                <div
+                  key={
+                    i // className="project"
+                  }
+                  className={outerCard}
+                >
+                  <div className={cardTop}>
+                    <img
+                      src={withPrefix(project.image)}
+                      alt={project.title}
+                      width="100%"
+                      className="projectImg"
+                    />
 
-                        <div className={cardBottom}>
-                          <a
-                            href={project.link}
-                            aria-label={project.title}
-                            target="blank"
-                          >
-                            <h2>{project.title}</h2>
-                            <p
-                              className={css`
-                              text-align: left;
-                            `}
-                            >
-                              {project.description}
-                            </p>
-                            <div className="keywords">
-                              <code>
-                                {' '}
-                                {'[ ' + project.keywords.join(', ') + ' ]'}{' '}
-                              </code>
-                            </div>
-                          </a>
-                        </div>
-                      </div>
-                    )
-                  )
-                })
-              : this.props.projectData.map((project, i) => {
-                  return (
-                    <div
-                      id={project.title}
-                      onScroll={this.handleScroll}
-                      ref={this.myRef}
-                      key={
-                        i // className="project"
-                      }
-                      className={outerCard}
+                    <h2>{project.title}</h2>
+                  </div>
+
+                  <div className={cardBottom}>
+                    <a
+                      href={project.link}
+                      aria-label={project.title}
+                      target="blank"
                     >
-                      <div className={cardTopHov}>
-                        {/* <a
-                          href={project.link}
-                          aria-label={project.title}
-                          target="blank"
-                        > */}
-                        <img
-                          src={withPrefix(project.image)}
-                          alt={project.title}
-                          width="100%"
-                          className="projectImg"
-                        />
-                        {/* </a> */}
-                        <h2>{project.title}</h2>
+                      <h2>{project.title}</h2>
+                      <p
+                        className={css`
+                          text-align: left;
+                        `}
+                      >
+                        {project.description}
+                      </p>
+                      <div className="keywords">
+                        <code>
+                          {' '}
+                          {'[ ' + project.keywords.join(', ') + ' ]'}{' '}
+                        </code>
                       </div>
-
-                      <div className={cardBottom}>
-                        <a
-                          href={project.link}
-                          aria-label={project.title}
-                          target="blank"
-                        >
-                          <h2>{project.title}</h2>
-                          <p
-                            className={css`
-                              text-align: left;
-                            `}
-                          >
-                            {project.description}
-                          </p>
-                          <div className="keywords">
-                            <code>
-                              {' '}
-                              {'[ ' + project.keywords.join(', ') + ' ]'}{' '}
-                            </code>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                  )
-                })}
+                    </a>
+                  </div>
+                </div>
+              )
+            })}
           </div>
         </div>
       </section>

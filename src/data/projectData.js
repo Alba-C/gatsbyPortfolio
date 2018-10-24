@@ -2,7 +2,7 @@ let projectData = [
   {
     image: '/static/assets/drummachine400x300.png',
     title: 'Drum Machine',
-    description: 'Free Code Camp project to demonstrate use of HTML5 Audio',
+    description: 'React project to demonstrate use of HTML5 Audio',
     link: 'https://codepen.io/Alba-C/full/MBEbNz/',
     featured: true,
     keywords: [
@@ -21,7 +21,7 @@ let projectData = [
     image: '/static/assets/pomodoroClock400x300.png',
     title: 'Pomodoro Clock',
     description:
-      'Free Code Camp project working wth setInterval() and HTML5 Audio',
+      'React project working wth setInterval() and HTML5 Audio',
     link: 'https://codepen.io/Alba-C/full/zLJpjW/',
     featured: true,
     keywords: [
@@ -41,7 +41,7 @@ let projectData = [
     image: '/static/assets/calculator400x300.png',
     title: 'Calculator',
     description:
-      'Free Code Camp project working with React, Flexbox, Key Events and math',
+      'React project using Flexbox, Key Events and math',
     link: 'https://codepen.io/Alba-C/full/ajYGYb/',
     keywords: ['React', 'JSX', 'CSS', 'Flexbox', 'ES6', 'HTML', 'JavaScript'],
   },
@@ -50,6 +50,7 @@ let projectData = [
     title: 'D3.js Choropleth Map',
     description: 'Data Visualization using D3.js and Async REST API Calls',
     link: 'https://codepen.io/Alba-C/full/BOKgVX/',
+    featured: true,
     keywords: ['D3.js', 'ES6', 'REST API', 'Data Viz', 'JavaScript'],
   },
   {
@@ -57,6 +58,7 @@ let projectData = [
     title: 'D3.js Heatmap',
     description: 'Data Visualization using D3.js and Async REST API',
     link: 'https://codepen.io/Alba-C/full/MqaYER/',
+    featured: true,
     keywords: ['D3.js', 'ES6', 'REST API', 'Data Viz', 'JavaScript'],
   },
   {
@@ -137,7 +139,7 @@ let projectData = [
     title: 'Calculator',
     description: 'Four function basic math with history display and backspace.',
     link: 'http://www.recalcapp.com',
-    keywords: ['Swift', 'iOS', 'Mobile'],
+    keywords: ['Swift', 'iOS', 'Mobile', 'Xcode'],
   },
 
   {
@@ -146,7 +148,8 @@ let projectData = [
     description:
       'Calculating calendar days left in a listing agreement or business days until your next vacation is complete in a few simple taps with the Date Calculator.',
     link: 'http://www.recalcapp.com',
-    keywords: ['Swift', 'iOS', 'Mobile'],
+    featured: true,
+    keywords: ['Swift', 'iOS', 'Mobile', 'Xcode'],
   },
 
   {
@@ -155,7 +158,7 @@ let projectData = [
     description:
       'Super Fast with a clean design and intuitive layout. Includes monthly payments and amortization table',
     link: 'http://www.recalcapp.com',
-    keywords: ['Swift', 'iOS', 'Mobile'],
+    keywords: ['Swift', 'iOS', 'Mobile','Xcode'],
   },
   {
     image: '/static/assets/recalcProrate400x300.png',
@@ -163,7 +166,7 @@ let projectData = [
     description:
       'Take the guesswork out of prorating monthly or annual expenses. The Prorate Calculator uses a full screen calendar to enter dates quickly and accurately.',
     link: 'http://www.recalcapp.com',
-    keywords: ['Swift', 'iOS', 'Mobile'],
+    keywords: ['Swift', 'iOS', 'Mobile', 'Xcode'],
   },
   {
     image: '/static/assets/markdownPreviewer400x300.png',
@@ -187,6 +190,7 @@ let projectData = [
     description:
       'Wordpress site for a real estate school, uses Woo-Commerce for product listings and has Square and Paypal payment integration',
     link: 'http://www.RealEstateAcademyOfOrlando.com ',
+    featured: true,
     keywords: [
       'Wordpress',
       'CSS',
@@ -224,6 +228,7 @@ let projectData = [
     description:
       'My personal portfolio site, built with Gatsby, React and CSS-in-JS using Emotion',
     link: 'http://www.peridotrealestate.com ',
+    featured: true,
     keywords: [
       'Gatsby',
       'React',
@@ -241,8 +246,9 @@ let projectData = [
     image: '/static/assets/spotAutoVolume400x300.png',
     title: 'Spotify Auto Volume',
     description:
-      'Node JS app that listens for ads on the Spotify Mac App and automatically lowers the volume until the ads end.',
+      'Node JS app that listens for ads on the Spotify desktop for Mac app and automatically lowers the volume until the ads end.',
     link: 'https://github.com/Alba-C/SpotifyAutoVolume',
+    featured: true,
     keywords: ['Node JS', 'JavaScript', 'ES6'],
   },
 ]
