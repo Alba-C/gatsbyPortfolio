@@ -92,7 +92,7 @@ export default class Contact extends Component {
             questions. ¯\_(ツ)_/¯ Whatever the reason, don't be shy. I'd
             love to hear from you.
           </p>
-          <form name="contactForm" method="POST" action="/formSuccess" data-netlify="true" netlify-honeypot="bot-field" data-netlify-recaptcha="true" onSubmit={this.handleSubmit} className={css`
+          <form name="contactForm2" method="POST" action="/formSuccess" data-netlify="true" netlify-honeypot="bot-field" data-netlify-recaptcha="true" onSubmit={this.handleSubmit} className={css`
               font-size: 1rem;
               display: flex;
               flex-direction: column;
@@ -101,7 +101,7 @@ export default class Contact extends Component {
               padding: 30px;
               margin: 0 -15px;
               border-radius: 5px;`}>
-            <input type="hidden" name="contactForm" value="contactForm" onChange={this.handleChange} />
+            <input type="hidden" name="contactForm2" value="contactForm2" onChange={this.handleChange} />
             <p className={css`
                 display: flex;
                 justify-content: center;
