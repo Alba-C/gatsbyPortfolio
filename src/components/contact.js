@@ -1,21 +1,26 @@
 import React, { Component } from 'react'
 import { css } from 'emotion'
+import { navigateTo } from "gatsby-link";
 import ReCAPTCHA from 'react-google-recaptcha'
 
 // const RECAPTCHA_KEY = process.env.SITE_RECAPTCHA_KEY
 
-const form = css({
-  fontSize: '1.25rem',
-  overflow: 'hidden',
-  backgroundColor: 'transparent',
-  boxShadow: '0 0 10px 0 black',
-  zIndex: 999,
-  display: 'flex',
-  '@media (max-width: 600px)': {
-    display: 'block',
-  },
-})
-
+// const form = css({
+//   fontSize: '1.25rem',
+//   overflow: 'hidden',
+//   backgroundColor: 'transparent',
+//   boxShadow: '0 0 10px 0 black',
+//   zIndex: 999,
+//   display: 'flex',
+//   '@media (max-width: 600px)': {
+//     display: 'block',
+//   },
+// })
+function encode(data) {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+    .join("&");
+}
 
 
 export default class Contact extends Component {
@@ -26,9 +31,28 @@ export default class Contact extends Component {
     }
   }
 
+  handleChange = e => {
+    this.setState({ [e.target.name]: e.target.value });
+  };
+
   handleRecaptcha = value => {
   this.setState({ 'g-recaptcha-response': value })
   }
+
+   handleSubmit = e => {
+    e.preventDefault();
+    const form = e.target;
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({
+        "form-name": form.getAttribute("name"),
+        ...this.state
+      })
+    })
+      .then(() => navigateTo(form.getAttribute("action")))
+      .catch(error => alert(error));
+  };
   
   form = css({
     fontSize: '1.25rem',
@@ -68,7 +92,7 @@ export default class Contact extends Component {
             questions. ¯\_(ツ)_/¯ Whatever the reason, don't be shy. I'd
             love to hear from you.
           </p>
-          <form name="contactForm" method="POST" action="/formSuccess" data-netlify="true" netlify-honeypot="bot-field" data-netlify-recaptcha="true" className={css`
+          <form name="contactForm" method="POST" action="/formSuccess" data-netlify="true" netlify-honeypot="bot-field" data-netlify-recaptcha="true" onSubmit={this.handleSubmit} className={css`
               font-size: 1rem;
               display: flex;
               flex-direction: column;
@@ -77,7 +101,7 @@ export default class Contact extends Component {
               padding: 30px;
               margin: 0 -15px;
               border-radius: 5px;`}>
-            <input type="hidden" name="contactForm" value="contactForm" />
+            <input type="hidden" name="contactForm" value="contactForm" onChange={this.handleChange} />
             <p className={css`
                 display: flex;
                 justify-content: center;
@@ -87,7 +111,7 @@ export default class Contact extends Component {
                   width: 115px;`}>
                 Your Name:
               </label>
-              <input type="text" name="name" id="name" required placeholder=" your name" className={css`
+              <input type="text" name="name" id="name" required placeholder=" your name" onChange={this.handleChange} className={css`
                   width: 70%;
                   margin-left: 15px;
                   border-radius: 5px;
@@ -103,7 +127,7 @@ export default class Contact extends Component {
                   width: 115px;`}>
                 Your Email:
               </label>
-              <input type="email" name="email" id="email" required placeholder=" your@email.com" className={css`
+              <input type="email" name="email" id="email" required placeholder=" your@email.com" onChange={this.handleChange} className={css`
                   width: 70%;
                   margin-left: 15px;
                   border-radius: 5px;
@@ -120,7 +144,7 @@ export default class Contact extends Component {
                   width: 115px;`}>
                 Message:
               </label>
-              <textarea name="message" id="message" placeholder="Let me know how I can help!" className={css`
+              <textarea name="message" id="message" placeholder="Let me know how I can help!" onChange={this.handleChange} className={css`
                   border-radius: 5px;
                   margin-left: 15px;
                   width: 70%;
