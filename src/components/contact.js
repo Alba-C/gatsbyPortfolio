@@ -206,7 +206,7 @@ const Contact = () => {
                 }
               `}
             />
-            <div data-netlify-recaptcha></div>
+            <div netlify-recaptcha data-netlify-recaptcha />
             <button
               type="submit"
               className={css`
