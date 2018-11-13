@@ -20,8 +20,7 @@ let projectData = [
   {
     image: '/static/assets/pomodoroClock400x300.png',
     title: 'Pomodoro Clock',
-    description:
-      'React project working wth setInterval() and HTML5 Audio',
+    description: 'React project working wth setInterval() and HTML5 Audio',
     link: 'https://codepen.io/Alba-C/full/zLJpjW/',
     featured: true,
     keywords: [
@@ -40,8 +39,7 @@ let projectData = [
   {
     image: '/static/assets/calculator400x300.png',
     title: 'Calculator',
-    description:
-      'React project using Flexbox, Key Events and math',
+    description: 'React project using Flexbox, Key Events and math',
     link: 'https://codepen.io/Alba-C/full/ajYGYb/',
     keywords: ['React', 'JSX', 'CSS', 'Flexbox', 'ES6', 'HTML', 'JavaScript'],
   },
@@ -95,14 +93,14 @@ let projectData = [
     description:
       'Simple project to make ajax calls, receive random quotes and send to twitter',
     link: 'https://codepen.io/Alba-C/full/ZrmKzN/',
-    keywords: ['JQuery', 'HTML', 'CSS', 'BootStrap', 'Responsive'],
+    keywords: ['jQuery', 'HTML', 'CSS', 'BootStrap', 'Responsive'],
   },
   {
     image: '/static/assets/twitchAPI400x300.png',
     title: 'Twitch API Viewer ',
     description: 'Use the Twitch API to view User Status',
     link: 'https://codepen.io/Alba-C/full/geaOyq/',
-    keywords: ['BootStrap', 'HTML', 'CSS', 'REST API', 'JQuery'],
+    keywords: ['BootStrap', 'HTML', 'CSS', 'REST API', 'jQuery'],
   },
   {
     image: '/static/assets/wikipediaViewer400x300.png',
@@ -110,7 +108,7 @@ let projectData = [
     description: 'Use the Wikipedia Api to create a simple search bar',
     link: 'https://codepen.io/Alba-C/full/bvNwvR/',
     keywords: [
-      'JQuery',
+      'jQuery',
       'HTML',
       'CSS',
       'REST API',
@@ -125,7 +123,7 @@ let projectData = [
       'Use weather API to create simple Weather Dashboard parsing received JSON making backround images conditional based on forecast',
     link: 'https://codepen.io/Alba-C/full/eVoxwQ/',
     keywords: [
-      'JQuery',
+      'jQuery',
       'HTML',
       'CSS',
       'JavaScript',
@@ -158,7 +156,7 @@ let projectData = [
     description:
       'Super Fast with a clean design and intuitive layout. Includes monthly payments and amortization table',
     link: 'http://www.recalcapp.com',
-    keywords: ['Swift', 'iOS', 'Mobile','Xcode'],
+    keywords: ['Swift', 'iOS', 'Mobile', 'Xcode'],
   },
   {
     image: '/static/assets/recalcProrate400x300.png',
