@@ -249,6 +249,24 @@ let projectData = [
     featured: true,
     keywords: ['Node JS', 'JavaScript', 'ES6'],
   },
+  {
+    image: '/static/assets/emberQuiz400x300.png',
+    title: 'Ember Quiz',
+    description: 'CRUD App using Ember 3.5 and Firebase',
+    link: 'https://emberquiz.firebaseapp.com/',
+    featured: true,
+    keywords: [
+      'Ember',
+      'Handlebars',
+      'CSS',
+      'Flexbox',
+      'Firebase',
+      'ES6',
+      'JavaScript',
+      'HTML',
+      'BootStrap'
+    ],
+  },
 ]
 export default projectData
 
