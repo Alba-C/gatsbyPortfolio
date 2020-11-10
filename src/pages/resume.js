@@ -5,7 +5,7 @@ import Layout from '../components/layout'
 
 const Resume = () => {
   const globalStyles = css`
-    width: 980px;
+    width: 1024px;
     margin: auto;
     background-color: rgb(242, 242, 242);
     padding: 25px 45px 50px 45px;
@@ -162,7 +162,7 @@ const Resume = () => {
             <h3>Relevant Experience </h3>
 
             <h4>
-              Software engineer,{' '}
+              Software Engineer,{' '}
               <a
                 href="http://www.photoday.io"
                 target="_blank"
