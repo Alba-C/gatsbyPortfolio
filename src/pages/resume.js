@@ -125,11 +125,11 @@ const Resume = () => {
         <div className="res-profile">
           <h3>Professional Summary</h3>
           <p>
-            Front-End Developer with a primary focus on Javascript and React.
+            Front-End Developer with a primary focus on JavaScript and React.
             Chris has extensive experience in business development, marketing
-            and education and brings a deep understanding of how quality
+            and education, and brings a deep understanding of how quality
             software development can enrich the lives of users and exceed the
-            goals of the stake holders.
+            goals of stakeholders.
           </p>
         </div>
         <div className="skills">
@@ -138,7 +138,7 @@ const Resume = () => {
             <h4>Front End: </h4>
             <span>
               JavaScript, HTML5, CSS3, React, Gatsby, Redux, JSX, jQuery, Swift,
-              Markdown, TypeScript, Wordpress, Bootstrap, Emotion JS, D3JS,
+              Markdown, TypeScript, WordPress, Bootstrap, Emotion JS, D3JS,
               Canvas, Sass/SCSS
             </span>
           </div>
@@ -182,9 +182,9 @@ const Resume = () => {
               to quickly engineer and iterate features while adhering to best
               practices to ensure code is readable, maintainable and easily
               refactored. I was instrumental in shipping a number of prominent
-              features like, Gallery List Virtualization, Drag and Drop
-              matching, Custom Theme Previews, Image Cropping and Virtual
-              Preview of print products.
+              features like Gallery List Virtualization, Drag and Drop Matching,
+              Custom Theme Previews, Image Cropping and Virtual Preview of print
+              products.
             </p>
 
             <h4>
@@ -200,9 +200,10 @@ const Resume = () => {
             </h4>
 
             <p>
-              An iOS app for Real Estate Professionals, to assist with common
-              math and date calculations. This was built in Xcode using Swift 4,
-              UIKit, CocoaPods and incorporates ads using AdMob from Google.
+              Developed an iOS app for Real Estate Professionals, to assist with
+              common math and date calculations. This was built in Xcode using
+              Swift 4, UIKit, CocoaPods and incorporates ads using AdMob from
+              Google.
             </p>
 
             <h4>
