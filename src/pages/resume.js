@@ -37,7 +37,8 @@ const Resume = () => {
     h4 {
       font-size: 1rem;
       font-weight: 600;
-    }`
+    }
+  `
 
   const skill = css`
     display: flex;
@@ -51,7 +52,8 @@ const Resume = () => {
     span {
       width: 83%;
       margin-left: 10px;
-    }`
+    }
+  `
   const cert = css`
     display: flex;
     justify-content: space-between;
@@ -71,45 +73,63 @@ const Resume = () => {
       margin-left: 10px;
     }
   `
-  return <Layout>
+  return (
+    <Layout>
       <div className={globalStyles}>
         <div className="res-header">
-          <div className={css`
+          <div
+            className={css`
               display: flex;
               align-items: baseline;
               justify-content: space-between;
-              border-bottom: solid 6px #002851;`}>
-            <h1>Christopher Albanese</h1>
+              border-bottom: solid 6px #002851;
+            `}
+          >
+            <h1>Chris Albanese</h1>
             <h2>| Front-End Web Developer</h2>
           </div>
         </div>
-        <div className={css`
+        <div
+          className={css`
             display: flex;
             justify-content: space-between;
-            margin-bottom: 1rem;`}>
-          <a href="mailto:Christopher@CafeRE.com" className={css`
-              color: rgb(69, 69, 69);`}>
+            margin-bottom: 1rem;
+          `}
+        >
+          <a
+            href="mailto:Christopher@CafeRE.com"
+            className={css`
+              color: rgb(69, 69, 69);
+            `}
+          >
             Christopher@CafeRE.com
           </a>
-          <a href={withPrefix("/static/assets/resume.pdf")} download id="btnResume" className={css`
+          <a
+            href={withPrefix(
+              '/static/assets/chris_albanese_web_dev_11_2020.pdf'
+            )}
+            download
+            id="btnResume"
+            className={css`
               border-radius: 3px;
               background-color: #bada55;
               padding: 5px 10px;
               margin-top: 5px;
               color: rgb(69, 69, 69);
-              box-shadow: 0px 1px 1px 0 rgba(69, 69, 69, 0.439);`}>
+              box-shadow: 0px 1px 1px 0 rgba(69, 69, 69, 0.439);
+            `}
+          >
             Download PDF
           </a>
         </div>
         <div className="res-profile">
           <h3>Professional Summary</h3>
           <p>
-            With extensive experience in business development, marketing and
-            education, Chris brings a deep understanding that code flows from
-            keyboards to customers, and how the requirements of the business
-            and its stakeholders ultimately need to intersect with the needs
-            of the client. This fuels his appreciation for user-driven
-            development.
+            Front-End Developer with a primary focus on Javascript and React.
+            Chris has extensive experience in business development, marketing
+            and education and brings a deep understanding of how quality
+            software development can enrich the lives of users and exceed the
+            goals of the stake holders.
           </p>
         </div>
         <div className="skills">
@@ -117,19 +137,22 @@ const Resume = () => {
           <div className={skill}>
             <h4>Front End: </h4>
             <span>
-              JavaScript (ES6), HTML, CSS, SASS (SCSS), JSX, Swift, Markdown,
-              Wordpress, jQuery, Bootstrap, Emotion JS.
+              JavaScript, HTML5, CSS3, React, Gatsby, Redux, JSX, jQuery, Swift,
+              Markdown, TypeScript, Wordpress, Bootstrap, Emotion JS, D3JS,
+              Canvas, Sass/SCSS
             </span>
           </div>
           <div className={skill}>
             <h4>Back End: </h4>
-            <span>Express, Mongo DB, Node JS, Mongoose</span>
+            <span>
+              REST Api, Express, Mongo DB, Node JS, Mongoose, FireBase
+            </span>
           </div>
           <div className={skill}>
             <h4>OS/Software: </h4>
             <span>
-              macOS, Windows, Visual Studio Code, Atom, Xcode, Git & Github,
-              Photoshop, fileMaker Pro, Glitch, CodeSandbox.io, MS Office
+              Git, Github, VSCode, Vim, Sketch, PhotoShop, Illustrator, Figma,
+              macOS, Windows
             </span>
           </div>
         </div>
@@ -137,105 +160,148 @@ const Resume = () => {
         <div>
           <div className="experience">
             <h3>Relevant Experience </h3>
-          <a href="http://www.ChristopherAlbanese.com" target="_blank" rel="noopener noreferrer">
-              <h4>www.ChristopherAlbanese.com - 2018 - present</h4>
-            </a>
+
+            <h4>
+              Software engineer,{' '}
+              <a
+                href="http://www.photoday.io"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={css`
+                  color: rgb(69, 69, 69);
+                `}
+              >
+                PhotoDay.io{' '}
+              </a>
+              ; Orlando, FL — Dec 2018–Present
+            </h4>
 
             <p>
-              A Personal portfolio site designed to showcase recent projects
-              and certifications. This was built using React v16 with Gatsby
-              v2 and styled with CSS-in-JS using the Emotion-JS library.{' '}
+              Develop and maintain business applications for photography studios
+              and consumer facing e-commerce website. Follow agile methodologies
+              to quickly engineer and iterate features while adhering to best
+              practices to ensure code is readable, maintainable and easily
+              refactored. I was instrumental in shipping a number of prominent
+              features like, Gallery List Virtualization, Drag and Drop
+              matching, Custom Theme Previews, Image Cropping and Virtual
+              Preview of print products.
             </p>
-          <a href="http://www.ReCalcApp.com" target="_blank" rel="noopener noreferrer">
-              <h4>www.RECalcApp.com – Jan 2017 – Nov 2017 </h4>
-            </a>
+
+            <h4>
+              Mobile Developer,{' '}
+              <a
+                href="http://www.ReCalcApp.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                www.RECalcApp.com{' '}
+              </a>
+              ; Orlando, FL – June 2017 – Oct 2017{' '}
+            </h4>
 
             <p>
               An iOS app for Real Estate Professionals, to assist with common
-              math and date calculations. This was built in Xcode using Swift
-              4, UIKit, CocoaPods and incorporates ads using AdMob from
-              Google.
+              math and date calculations. This was built in Xcode using Swift 4,
+              UIKit, CocoaPods and incorporates ads using AdMob from Google.
             </p>
-          <a href="http://www.RealEstateAcademyofOrlando.com" target="_blank" rel="noopener noreferrer">
-              <h4>
-                www.RealEstateAcademyofOrlando.com – June 2016 – Present{' '}
-              </h4>
-            </a>
+
+            <h4>
+              Web Developer & Owner,{' '}
+              <a
+                href="http://www.RealEstateAcademyofOrlando.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                www.RealEstateAcademyofOrlando.com{' '}
+              </a>
+              ; Orlando, FL – June 2016 – Present{' '}
+            </h4>
 
             <p>
-              An online real estate school built on WordPress with WooCommerce
-              and incorporating payment gateways from Square and PayPal.
+              Developed and maintain an eCommerce site for a real estate school
+              built on WordPress using WooCommerce and incorporating payment
+              gateways from Square and PayPal
             </p>
           </div>
         </div>
 
-        <div>
-          <div className="certificates">
-            <a href="https://www.freecodecamp.org/alba-c" target="_blank" rel="noreferrer noopener" className={css`
-                cursor: pointer;
-                color: inherit;
+        <div className="certificates">
+          <a
+            href="https://www.freecodecamp.org/alba-c"
+            target="_blank"
+            rel="noreferrer noopener"
+            className={css`
+              cursor: pointer;
+              color: inherit;
+              text-decoration: none;
+              &:hover {
                 text-decoration: none;
-                &:hover {
-                  text-decoration: none;
-                  color: inherit;
-                }`}>
-              <div>
-                <h3 className={``}>Certificates: </h3>
-                <span className={css`
-                    position: relative;
-                    font-style: italic;
-                    top: -3.1rem;
-                    left: 160px;
-                    font-size: 1.1rem;`}>
-                  FCC | FreeCodeCamp.org
-                </span>
-              </div>
+                color: inherit;
+              }
+            `}
+          >
+            <div>
+              <h3>Certificates: </h3>
+              <span
+                className={css`
+                  position: relative;
+                  font-style: italic;
+                  top: -3.1rem;
+                  left: 200px;
+                  font-size: 1.1rem;
+                `}
+              >
+                FCC | FreeCodeCamp.org
+              </span>
+            </div>
 
-              <p className={css`
-                  margin-top: -3rem;`}>
-                (approximately 300 hours per certificate)
-              </p>
+            <p
+              className={css`
+                margin-top: -3rem;
+              `}
+            >
+              (approximately 300 hours per certificate)
+            </p>
+            <div className={cert}>
+              <h4>Responsive Web Design: </h4>
+              <span>
+                HTML, CSS, Visual Design, A11Y, Responsive Design Principles,
+                CSS Flexbox, CSS Grid, User Story Projects
+              </span>
+            </div>
+            <div>
+              <h4>JavaScript Algorithms and Data Structures: </h4>
               <div className={cert}>
-                <h4>Responsive Web Design: </h4>
+                <div />{' '}
                 <span>
-                  HTML, CSS, Visual Design, A11Y, Responsive Design
-                  Principles, CSS Flexbox, CSS Grid, User Story Projects
+                  JavaScript, ES6, Regular Expressions, Debugging, Data
+                  Structures, Algorithm Scripting, OOP, Functional Programming,
+                  Intermediate Algorithm Scripting, User Story Projectss
                 </span>
               </div>
-              <div>
-                <h4>JavaScript Algorithms and Data Structures: </h4>
-                <div className={cert}>
-                  <div /> <span>
-                    JavaScript, ES6, Regular Expressions, Debugging, Data
-                    Structures, Algorithm Scripting, OOP, Functional
-                    Programming, Intermediate Algorithm Scripting, User Story
-                    Projectss
-                  </span>
-                </div>
-              </div>
-              <div className={cert}>
-                <h4>Front End Libraries: </h4>
-                <span>
-                  Bootstrap, jQuery, SASS, React, Redux, React & Redux, User
-                  Story Projects
-                </span>
-              </div>
-              <div className={cert}>
-                <h4>Data Visualization: </h4>
-                <span>
-                  Data Visualization with D3.js, JSON APIs and Ajax, User
-                  Story Projects
-                </span>
-              </div>
-              <div className={cert}>
-                <h4>APIs and Microservices: </h4>
-                <span>
-                  Managing Packages with NPM, Basic Node and Express, MongoDB
-                  and Mongoose, APIs and Microservices Projects
-                </span>
-              </div>
-            </a>
-          </div>
+            </div>
+            <div className={cert}>
+              <h4>Front End Libraries: </h4>
+              <span>
+                Bootstrap, jQuery, SASS, React, Redux, React & Redux, User Story
+                Projects
+              </span>
+            </div>
+            <div className={cert}>
+              <h4>Data Visualization: </h4>
+              <span>
+                Data Visualization with D3.js, JSON APIs and Ajax, User Story
+                Projects
+              </span>
+            </div>
+            <div className={cert}>
+              <h4>APIs and Microservices: </h4>
+              <span>
+                Managing Packages with NPM, Basic Node and Express, MongoDB and
+                Mongoose, APIs and Microservices Projects
+              </span>
+            </div>
+          </a>
         </div>
 
         <div className="res-education">
@@ -253,6 +319,7 @@ const Resume = () => {
         </div>
       </div>
     </Layout>
+  )
 }
 
 export default Resume
