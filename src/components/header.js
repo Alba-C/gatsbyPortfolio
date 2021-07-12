@@ -1,15 +1,16 @@
 import React from 'react'
-import { css } from 'emotion';
-import Navbar from './navbar';
+import { css } from '@emotion/react'
+import Navbar from './navbar'
 
 const Header = ({ siteTitle }) => (
   <div>
     <nav
-      className={css`
+      css={css`
         background-color: #002851;
         margin-bottom: 0;
         z-index: 1;
-        font-family: 'Poller One';
+        font-family: Montserrat, Arial, Helvetica, sans-serif;
+        font-weight: bolder;
       `}
     >
       <Navbar />
@@ -18,5 +19,3 @@ const Header = ({ siteTitle }) => (
 )
 
 export default Header
-
-

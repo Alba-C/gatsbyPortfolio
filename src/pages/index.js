@@ -21,21 +21,22 @@ class Index extends Component {
     this.keywordClick = this.keywordClick.bind(this)
   }
 
-   keywordClick(e) {
+  keywordClick(e) {
     this.filterProjects(e.target.innerText)
-  this.state.filterWord === e.target.innerText
-    ? this.setState({
-      filterWord: 'Featured', projectData: projectData.filter(p => {
-        return p.featured === true
-      }) })
+    this.state.filterWord === e.target.innerText
+      ? this.setState({
+          filterWord: 'Featured',
+          projectData: projectData.filter((p) => {
+            return p.featured === true
+          }),
+        })
       : this.setState({ filterWord: e.target.innerText })
-}
-
+  }
 
   componentDidMount() {
     this.getKeywords(projectData)
     this.setState({
-      projectData: projectData.filter(p => {
+      projectData: projectData.filter((p) => {
         return p.featured === true
       }),
     })
@@ -44,29 +45,28 @@ class Index extends Component {
   filterProjects = (keyword) => {
     switch (keyword) {
       case 'Featured':
-        
         return this.setState({
-          projectData: projectData.filter(p => {
+          projectData: projectData.filter((p) => {
             return p.featured === true
           }),
         })
       case 'All':
         return this.setState({
-          projectData: projectData.filter(p => {
+          projectData: projectData.filter((p) => {
             return p
           }),
         })
       default:
         return this.setState({
-          projectData: projectData.filter(p => {
+          projectData: projectData.filter((p) => {
             return p.keywords.indexOf(keyword) !== -1
           }),
         })
     }
   }
-  getKeywords = data => {
+  getKeywords = (data) => {
     let arr = []
-    data.map(proj => {
+    data.map((proj) => {
       return (arr = arr.concat(proj.keywords))
     })
     let set = new Set(arr)

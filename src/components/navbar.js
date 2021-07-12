@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
-import { css } from 'emotion'
+import { css } from '@emotion/css'
 import { Link, withPrefix } from 'gatsby'
-//import Hamburger from '/src/components/hamburger'
 
 class Navbar extends Component {
   constructor(props) {
@@ -125,7 +124,6 @@ class Navbar extends Component {
                 className={css`
                   margin-bottom: 0;
                   height: 60px;
-                  /* width: 60px; */
                 `}
               />
             ) : (
@@ -134,7 +132,7 @@ class Navbar extends Component {
           </Link>
           <div className={linkContainer}>
             <a href="/#projects" className={topnavA} onClick={this.closeMenu}>
-             Projects
+              Projects
             </a>
             <a href="/#about" className={topnavA} onClick={this.closeMenu}>
               About
@@ -175,10 +173,6 @@ class Hamburger extends Component {
   lineColor = this.props.lineColor
   size = this.props.size
 
-  // used to simulate a click from an outer component
-  // handleClick = () => {
-  //   this.setState({ collapsed: !this.state.collapsed })
-  // }
   // use this to get the button click from the navBar component
   static getDerivedStateFromProps(nextProps, prevState) {
     if (nextProps.collapsed !== prevState.collapsed) {

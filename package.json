@@ -4,23 +4,32 @@
   "version": "1.0.0",
   "author": "Chris Albanese <christopher@cafere.com>",
   "dependencies": {
-    "emotion": "^9.2.12",
-    "emotion-server": "^9.2.12",
-    "gatsby": "^2.0.0",
-    "gatsby-plugin-emotion": "^2.0.5",
-    "gatsby-plugin-manifest": "^2.0.2",
-    "gatsby-plugin-offline": "^2.0.5",
-    "gatsby-plugin-react-helmet": "^3.0.0",
-    "gatsby-plugin-typography": "^2.2.0",
-    "react": "^16.5.1",
-    "react-dom": "^16.5.1",
-    "react-emotion": "^9.2.12",
-    "react-google-recaptcha": "^1.0.5",
-    "react-helmet": "^5.2.0",
-    "react-on-visible": "^1.5.1",
-    "react-typography": "^0.16.13",
-    "typography": "^0.16.17",
-    "typography-theme-funston": "^0.15.10"
+    "@emotion/css": "^11.1.3",
+    "@emotion/react": "^11.4.0",
+    "@emotion/styled": "^11.3.0",
+    "babel-eslint": "^10.1.0",
+    "babel-plugin-emotion": "^11.0.0",
+    "emotion": "^11.0.0",
+    "emotion-server": "^11.0.0",
+    "gatsby": "^3.9.1",
+    "gatsby-plugin-emotion": "^6.9.0",
+    "gatsby-plugin-google-analytics": "^3.9.0",
+    "gatsby-plugin-manifest": "^3.9.0",
+    "gatsby-plugin-offline": "^4.9.0",
+    "gatsby-plugin-react-helmet": "^4.9.0",
+    "gatsby-plugin-typography": "^3.9.0",
+    "postcss": "^8.3.5",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-emotion": "^10.0.0",
+    "react-google-recaptcha": "^2.1.0",
+    "react-helmet": "^6.1.0",
+    "react-on-visible": "^1.6.0",
+    "react-spinners": "^0.11.0",
+    "react-typography": "^0.16.20",
+    "typescript": "^4.3.5",
+    "typography": "^0.16.21",
+    "typography-theme-funston": "^0.16.19"
   },
   "keywords": [
     "gatsby"
@@ -33,7 +42,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "prettier": "^1.14.2"
+    "prettier": "^2.3.2"
   },
   "repository": {
     "type": "git",

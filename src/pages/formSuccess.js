@@ -1,11 +1,11 @@
 import React from 'react'
 import Layout from '../components/layout'
-import { css } from 'react-emotion'
+import { css } from '@emotion/react'
 
 const FormSuccess = () => (
   <Layout>
     <section
-      className={css`
+      css={css`
         background-color: #f1f7ed;
         text-align: center;
         color: #002851;
@@ -17,7 +17,7 @@ const FormSuccess = () => (
         background-size: cover;
         h1 {
           @media (max-width: 600px) {
-           font-size: 1.5rem;
+            font-size: 1.5rem;
           }
         }
       `}
@@ -28,4 +28,4 @@ const FormSuccess = () => (
   </Layout>
 )
 
-export default FormSuccess;
+export default FormSuccess

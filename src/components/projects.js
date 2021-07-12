@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { withPrefix } from 'gatsby'
-import { css } from 'emotion'
+import { css } from '@emotion/css'
 
 const cardBottom = css`
   position: absolute;
@@ -39,7 +39,6 @@ const cardBottom = css`
         color: white;
         top: -1.25em;
         font-kerning: normal;
-        /* font-size: 1em; */
         content: 'Tech Used:';
         }
       }
@@ -62,7 +61,6 @@ const cardBottom = css`
         transform-origin: top left;
         transform: rotate(-45deg) skew(-45deg) translateY(300%) scale(0.7);
 
-        /* transform: rotate(-90deg) skew(0) translate(-100%); */
         opacity: 1;
         transition: all .25s ease-in ;
         
@@ -75,7 +73,6 @@ const cardBottom = css`
         top: 0;
         padding: 1em 1em 1em 3em;
         display: block;
-        /* margin-bottom: 8em; */
         font-size: 1.25em;
         line-height: 1.1em;
         opacity: 0;
@@ -104,7 +101,6 @@ const cardBottom = css`
         text-align: left;
         z-index: -1;
         padding-left: 1.5em .5em 0.5em 1em;
-        /* margin: 1em; */
         opacity: 0;
         background-color: transparent;
 
@@ -113,7 +109,6 @@ const cardBottom = css`
           color: white;
           top: -1em;
           font-kerning: normal;
-          /* font-size: 1.25em; */
           content: 'Tech Used:';
         }
           } 
@@ -146,7 +141,6 @@ const cardBottom = css`
         opacity: 1;
         transform: scale(1.2)
         background-color: #c0e0de;
-        /* background-color: transparent; */
         transition: all 0.25s ease-out;
         h2 {
           opacity: 1;
@@ -175,6 +169,7 @@ const outerCard = css`
   position: relative;
   padding: 20px;
   margin: 10px;
+  overflow: hidden;
   background-color: #ededed;
   max-width: 365px;
   min-width: 350px;
@@ -196,7 +191,6 @@ const outerCard = css`
 
   :hover{
     transform: scale(1.02);
-    /* justify-content: center; */
     transition: all 0.25s ease-in;
     
   }
@@ -223,11 +217,10 @@ const cardTop = css`
 `
 
 class Projects extends Component {
-  
   render() {
     return (
-      <section className={css``}>
-        <div // className=" projects-wrapper"
+      <section>
+        <div
           className={css`
             max-width: 1200px;
             margin: 10px auto;

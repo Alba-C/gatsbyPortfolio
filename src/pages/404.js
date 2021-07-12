@@ -1,11 +1,11 @@
 import React from 'react'
 import Layout from '../components/layout'
-import { css } from 'react-emotion'
+import { css } from '@emotion/react'
 
 const NotFoundPage = () => (
   <Layout>
     <section
-      className={css`
+      css={css`
         background-color: #f1f7ed;
         background: -webkit-radial-gradient(bottom, red, yellow, green);
         background: radial-gradient(at bottom, black, #3a3838);
@@ -26,7 +26,7 @@ const NotFoundPage = () => (
       <img
         src="/static/assets/spaceMan.png"
         alt=""
-        className={css`
+        css={css`
           margin: 0 auto;
         `}
       />
