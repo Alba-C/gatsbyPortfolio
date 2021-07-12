@@ -51,8 +51,9 @@ export default class Banner extends Component {
             align-items: center;
           `}
         >
+
           <img
-            src={withPrefix('/static/assets/IMG_BW7038.jpg')}
+            src={withPrefix('/assets/images/IMG_BW7038.jpg')}
             width="150px"
             alt="profile headshot"
             css={css`

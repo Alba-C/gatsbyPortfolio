@@ -1,6 +1,7 @@
 import React from 'react'
 import { css } from '@emotion/react'
 import Chevron from '../components/chevron'
+import { withPrefix } from 'gatsby'
 
 const footer = () => {
   return (
@@ -75,7 +76,7 @@ const footer = () => {
             rel="noopener noreferrer"
           >
             <img
-              src="/icons/codepenlogo.png"
+              src={withPrefix('assets/icons/codepenlogo.png')}
               alt="codepen logo"
               css={css`
                 height: 30px;
@@ -93,7 +94,7 @@ const footer = () => {
             rel="noopener noreferrer"
           >
             <img
-              src="/icons/GitHub-Mark-Light-64px.png"
+              src={withPrefix('assets/icons/GitHub-Mark-Light-64px.png')}
               alt="github logo"
               css={css`
                 height: 30px;
@@ -121,7 +122,7 @@ const footer = () => {
             `}
           >
             <img
-              src="/icons/email.png"
+              src={withPrefix('assets/icons/email.png')}
               alt="mail icon"
               css={css`
                 border-radius: 50%;
