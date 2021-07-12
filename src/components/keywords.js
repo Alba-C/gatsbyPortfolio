@@ -1,17 +1,17 @@
 import React from 'react'
-import { css } from 'react-emotion'
+import { css } from '@emotion/react'
 
-const Keywords = props => {
+const Keywords = (props) => {
   return (
     <section
-      className={css`
+      css={css`
         background-color: #c0e0de;
         padding: 20px 10px;
       `}
     >
       <div
         id="keyList"
-        className={css`
+        css={css`
           display: flex;
           flex-wrap: wrap;
           max-width: 1200px;
@@ -23,15 +23,14 @@ const Keywords = props => {
           font-family: 'Montserrat', sans-serif;
         `}
       >
-        {props.keywords.map(key => (
+        {props.keywords.map((key) => (
           <button
-            key={key} // href="#"
+            key={key}
             onClick={props.keywordClick}
-            className={css`
+            css={css`
               background-color: #bada55;
               color: rgb(69, 69, 69);
               display: inline-block;
-              /* text-transform: uppercase; */
               font-size: 1rem;
               font-weight: 800;
               margin-bottom: 5px;

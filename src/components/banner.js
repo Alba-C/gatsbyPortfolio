@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { css } from 'react-emotion'
+import { css } from '@emotion/react'
 import { withPrefix } from 'gatsby'
 
 export default class Banner extends Component {
@@ -40,8 +40,7 @@ export default class Banner extends Component {
     return (
       <div className="">
         <div
-          className={css`
-            // className="banner"
+          css={css`
             background-color: #f1f7ed;
             background-color: #fff;
             margin: 0 auto;
@@ -56,7 +55,7 @@ export default class Banner extends Component {
             src={withPrefix('/static/assets/IMG_BW7038.jpg')}
             width="150px"
             alt="profile headshot"
-            className={css`
+            css={css`
               border-radius: 50%;
               box-shadow: 2px 2px 4px rgba(20, 20, 20, 0.2);
               position: relative;
@@ -68,7 +67,7 @@ export default class Banner extends Component {
           />
           <h1>Chris Albanese</h1>
           <div
-            className={css`
+            css={css`
               font-size: 1.25em;
               font-weight: 500;
               text-align: center;
@@ -83,7 +82,7 @@ export default class Banner extends Component {
             {this.state.thingsIdo === 'Make' ? (
               <span
                 id="verbMake"
-                className={css`
+                css={css`
                   // className="verb"
                   display: inline-block;
                   border-radius: 3px;
@@ -102,7 +101,7 @@ export default class Banner extends Component {
             ) : this.state.thingsIdo === 'Break' ? (
               <div
                 id="break"
-                className={css`
+                css={css`
                   display: inline-block;
 
                   filter: drop-shadow(5px 5px 5px rgba(69, 69, 69, 0.639));
@@ -110,7 +109,7 @@ export default class Banner extends Component {
               >
                 <span
                   id="verbBreakL"
-                  className={css` // className="verb"
+                  css={css`
                   display: inline-block;
                   border-radius: 3px;
                   color: white;
@@ -118,7 +117,6 @@ export default class Banner extends Component {
                   padding: 10px 15px;
                   margin: 0 5px;
                   font-family: "Audiowide", cursive;
-                  box-shadow: 0px 1px 5px 1px rgba(69, 69, 69, 0.639);
                   color: rgb(255, 255, 255);
                   border-radius: 5px 0 0 5px;
                   border-right: 2px solid grey;
@@ -127,16 +125,13 @@ export default class Banner extends Component {
                   transform: rotate(-5deg) 
                   box-shadow: 5px 0px 15px 1px rgba(0, 0, 0, 0.639);
                   clip-path: polygon(44% 0, 100% 0, 91% 12%, 100% 23%, 90% 37%, 95% 48%, 75% 73%, 93% 66%, 87% 76%, 100% 79%, 93% 99%, 1% 100%, 0% 1%);
-              );
-                  /* text-decoration: line-through; */
                 `}
                 >
                   Br
                 </span>
                 <span
                   id="verbBreakR"
-                  className={css`
-                    // className="verb"
+                  css={css`
                     display: inline-block;
                     border-radius: 3px;
                     color: white;
@@ -172,7 +167,7 @@ export default class Banner extends Component {
             ) : (
               <span
                 id="verbFix"
-                className={css`
+                css={css`
                   // className="verb"
                   display: inline-block;
                   border-radius: 3px;
@@ -192,7 +187,7 @@ export default class Banner extends Component {
             cool things
           </div>
           <p
-            className={css`
+            css={css`
               text-align: center;
               padding: 0 20px;
             `}
@@ -200,7 +195,7 @@ export default class Banner extends Component {
             Front End Developer based in Orlando, FL
           </p>
           <p
-            className={css`
+            css={css`
               text-align: center;
               padding: 0 20px;
             `}

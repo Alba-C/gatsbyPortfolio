@@ -1,16 +1,16 @@
 import React from 'react'
-import { css } from 'emotion'
+import { css } from '@emotion/react'
 
 const About = () => {
   return (
     <section
       id="about"
-      className={css`
+      css={css`
         background-color: #f1f7ed;
       `}
     >
       <div
-        className={css`
+        css={css`
           max-width: 1200px;
           margin: 0 auto;
           background-color: #f1f7ed;
@@ -21,14 +21,14 @@ const About = () => {
         `}
       >
         <h2
-          className={css`
+          css={css`
             text-align: center;
           `}
         >
           Hi, I'm Chris.
         </h2>
         <p
-          className={css`
+          css={css`
             text-align: center;
             font-weight: bold;
           `}
