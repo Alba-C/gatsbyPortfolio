@@ -4,7 +4,7 @@ import { Link, withPrefix } from 'gatsby'
 
 class Navbar extends Component {
   constructor(props) {
-    super(props)
+    super(props)  
     this.state = {
       collapsed: true,
     }
@@ -38,7 +38,6 @@ class Navbar extends Component {
       fontSize: '1.25rem',
       overflow: 'hidden',
       backgroundColor: 'transparent',
-      // boxShadow: '0 0 10px 0 black',
       zIndex: 999,
       display: 'flex',
       '@media (max-width: 600px)': {
@@ -51,7 +50,6 @@ class Navbar extends Component {
       textAlign: 'center',
       padding: '14px 16px',
       textDecoration: 'none',
-      // fontSize: '17px',
       '&:hover': {
         textDecoration: 'none',
         color: this.state.collapsed ? 'inherit' : '#bada55',
@@ -79,15 +77,12 @@ class Navbar extends Component {
       border: 'none',
       backgroundColor: 'transparent',
       '&:hover': {
-        // backgroundColor: '#ddd',
       },
       '@media (max-width: 600px)': {
         display: 'block',
         position: this.state.collapsed ? 'relative' : 'absolute',
         top: 0,
         right: 0,
-        // // alignSelf: 'flex-end',
-        // // justifySelf: 'flex-start',
       },
     })
 
@@ -98,9 +93,7 @@ class Navbar extends Component {
       textAlign: 'center',
       padding: '14px 16px',
       textDecoration: 'none',
-      // fontSize: '17px',
       '&:hover': {
-        // backgroundColor: '#ddd',
         textDecoration: 'none',
         color: '#bada55',
         borderBottom: '3px solid #bada55',
@@ -119,7 +112,7 @@ class Navbar extends Component {
           <Link to="/" onClick={this.closeMenu} className={navBrand}>
             {this.state.collapsed ? (
               <img
-                src={withPrefix('/static/assets/CA-Logo.png')}
+                src={withPrefix('assets/images/CA-Logo.png')}
                 alt="logo"
                 className={css`
                   margin-bottom: 0;

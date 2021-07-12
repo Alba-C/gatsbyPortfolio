@@ -1,6 +1,7 @@
 import React from 'react'
 import Layout from '../components/layout'
 import { css } from '@emotion/react'
+import { withPrefix } from 'gatsby'
 
 const NotFoundPage = () => (
   <Layout>
@@ -24,7 +25,7 @@ const NotFoundPage = () => (
       <br />
 
       <img
-        src="/static/assets/spaceMan.png"
+        src={withPrefix('assets/images/spaceMan.png')}
         alt=""
         css={css`
           margin: 0 auto;
