@@ -1,6 +1,9 @@
 import React from 'react'
 import Layout from '../components/layout'
-import { css } from '@emotion/react'
+/** @jsx jsx */
+import { css, jsx } from '@emotion/react'
+
+import pug from '../../static/assets/images/pugInJacket.jpg'
 
 const FormSuccess = () => (
   <Layout>
@@ -11,7 +14,7 @@ const FormSuccess = () => (
         color: #002851;
         height: 83vh;
         padding: 50px;
-        background-image: url('/static/assets/pugInJacket.jpg');
+        background-image: ${`url(${pug})`};
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
