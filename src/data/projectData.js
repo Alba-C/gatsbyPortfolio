@@ -264,7 +264,7 @@ let projectData = [
       'ES6',
       'JavaScript',
       'HTML',
-      'BootStrap'
+      'BootStrap',
     ],
   },
 ]

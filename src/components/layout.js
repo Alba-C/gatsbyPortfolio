@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { StaticQuery, graphql } from 'gatsby'
-import { css } from 'emotion'
+import { css } from '@emotion/react'
 
 import Header from './header'
 import Footer from './footer'
@@ -19,11 +19,9 @@ const Layout = ({ children }) => (
         }
       }
     `}
-    render={data => (
+    render={(data) => (
       <div
-        className={css`
-          // background-image: url('/static/assets/dark_exa.png');
-          // background-repeat: repeat;
+        css={css`
           font-family: 'Montserrat', sans-serif;
         `}
       >
@@ -34,26 +32,28 @@ const Layout = ({ children }) => (
             { name: 'robots', content: 'follow' },
             { name: 'robots', content: 'index' },
             { name: 'googlebot', content: 'follow' },
-            // { name: 'viewport', content: '320' },
             { name: 'charset', content: 'utf-8' },
           ]}
         >
           <link
-            href="https://fonts.googleapis.com/css?family=Audiowide|Carter+One|Montserrat|Poller+One"
-            rel="stylesheet"
+            rel="preload"
+            as="style"
+            href="https://fonts.googleapis.com/css?family=Audiowide|Montserrat|Poller+One"
           />
-          
+
+          <link
+            rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Audiowide|Montserrat|Poller+One"
+          />
+
           <html lang="en" />
         </Helmet>
         <Header />
         <main
           id="top"
-          className={css`
+          css={css`
             margin: 0 auto;
-            // max-width: 1200px;
             padding-top: 0;
-            /* font-family: 'Montserrat', sans-serif; */
-            // box-shadow: 0px 2px 14px 10px rgba(20, 20, 20, 0.1);
             h1,
             h2,
             h3 {
