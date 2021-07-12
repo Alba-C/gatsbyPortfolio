@@ -1,5 +1,23 @@
 let projectData = [
   {
+    image: '/static/assets/emberQuiz400x300.png',
+    title: 'Ember Quiz',
+    description: 'CRUD App using Ember 3.5 and Firebase',
+    link: 'https://emberquiz.firebaseapp.com/',
+    featured: true,
+    keywords: [
+      'Ember',
+      'Handlebars',
+      'CSS',
+      'Flexbox',
+      'Firebase',
+      'ES6',
+      'JavaScript',
+      'HTML',
+      'BootStrap'
+    ],
+  },
+  {
     image: '/static/assets/drummachine400x300.png',
     title: 'Drum Machine',
     description: 'React project to demonstrate use of HTML5 Audio',
