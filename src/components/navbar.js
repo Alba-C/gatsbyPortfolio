@@ -117,6 +117,8 @@ class Navbar extends Component {
                 className={css`
                   margin-bottom: 0;
                   height: 60px;
+                  max-height: 60px;
+                  width: auto;
                 `}
               />
             ) : (
