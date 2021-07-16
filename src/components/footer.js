@@ -23,6 +23,9 @@ const footer = () => {
         <div
           onClick={() => window.scroll(0, 0)}
           aria-label="return to top"
+          role='button'
+          aria-hidden="true"
+          tabIndex="0"
           css={css`
             height: 100px;
             width: 150px;

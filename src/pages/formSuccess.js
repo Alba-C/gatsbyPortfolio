@@ -1,7 +1,6 @@
-import React from 'react'
 import Layout from '../components/layout'
-/** @jsx jsx */
 import { css, jsx } from '@emotion/react'
+/** @jsx jsx */
 
 import pug from '../../static/assets/images/pugInJacket.jpg'
 

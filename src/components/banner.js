@@ -77,6 +77,7 @@ export default class Banner extends Component {
               margin-bottom: 1rem;
             `}
             id="makeThings"
+            role="none"
             onMouseEnter={this.mouseEnter}
           >
             Likes to

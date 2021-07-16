@@ -1,6 +1,7 @@
-import React, { Component } from 'react'
-import { css } from '@emotion/css'
+import { Component } from 'react'
+import { jsx } from '@emotion/react'
 import { Link, withPrefix } from 'gatsby'
+/** @jsx jsx */
 
 class Navbar extends Component {
   constructor(props) {
@@ -34,7 +35,7 @@ class Navbar extends Component {
   }
 
   render() {
-    const topnav = css({
+    const topnav = {
       fontSize: '1.25rem',
       overflow: 'hidden',
       backgroundColor: 'transparent',
@@ -43,9 +44,9 @@ class Navbar extends Component {
       '@media (max-width: 600px)': {
         display: 'block',
       },
-    })
+    }
 
-    const navBrand = css({
+    const navBrand = {
       color: '#f2f2f2',
       textAlign: 'center',
       padding: '14px 16px',
@@ -60,16 +61,23 @@ class Navbar extends Component {
         margin: 'auto',
         textAlign: 'left',
       },
-    })
+    }
 
-    const linkContainer = css({
+    const logo = {
+      marginBottom: 0,
+      height: '60px',
+      maxHeight: '60px',
+      width: 'auto'
+    }
+
+    const linkContainer = {
       maxWidth: 1000,
       margin: '12px auto',
       height: '100%',
       paddingRight: 88,
-    })
+    }
 
-    const menuBtn = css({
+    const menuBtn = {
       float: 'right',
       padding: '10px 10px',
       textDecoration: 'none',
@@ -84,9 +92,9 @@ class Navbar extends Component {
         top: 0,
         right: 0,
       },
-    })
+    }
 
-    const topnavA = css({
+    const topnavA = {
       float: 'left',
       display: 'block',
       color: '#f2f2f2',
@@ -104,43 +112,40 @@ class Navbar extends Component {
         float: 'none',
         textAlign: 'left',
       },
-    })
+    }
 
     return (
       <nav>
-        <div className={topnav} id="myTopnav">
-          <Link to="/" onClick={this.closeMenu} className={navBrand}>
+        <div 
+        css={topnav}
+         id="myTopnav">
+          <Link to="/" onClick={this.closeMenu} css={navBrand}>
             {this.state.collapsed ? (
               <img
                 src={withPrefix('assets/images/CA-Logo.png')}
                 alt="logo"
-                className={css`
-                  margin-bottom: 0;
-                  height: 60px;
-                  max-height: 60px;
-                  width: auto;
-                `}
+                css={logo}
               />
             ) : (
               'Home'
             )}
           </Link>
-          <div className={linkContainer}>
-            <a href="/#projects" className={topnavA} onClick={this.closeMenu}>
+          <div className={linkContainer} css={linkContainer}>
+            <a href="/#projects" css={topnavA} onClick={this.closeMenu}>
               Projects
             </a>
-            <a href="/#about" className={topnavA} onClick={this.closeMenu}>
+            <a href="/#about" css={topnavA} onClick={this.closeMenu}>
               About
             </a>
-            <a href="/#contact" className={topnavA} onClick={this.closeMenu}>
+            <a href="/#contact" css={topnavA} onClick={this.closeMenu}>
               Contact
             </a>
-            <Link to="/resume" className={topnavA} onClick={this.closeMenu}>
+            <Link to="/resume" css={topnavA} onClick={this.closeMenu}>
               Resume
             </Link>
           </div>
           <button
-            className={menuBtn}
+            css={menuBtn}
             aria-label="menu toggle"
             onClick={this.handleClick}
           >
@@ -176,7 +181,7 @@ class Hamburger extends Component {
   }
 
   render() {
-    const menu = css({
+    const menu = {
       height: this.size,
       width: this.size,
       backgroundColor: this.background,
@@ -184,9 +189,9 @@ class Hamburger extends Component {
       borderRadius: this.state.collapsed ? '10%' : '50%',
       position: 'relative',
       transition: 'border-radius .5s ease-in',
-    })
+    }
 
-    const lineTop = css({
+    const lineTop = {
       position: 'absolute',
       backgroundColor: this.lineColor,
       margin: '0 10%',
@@ -195,9 +200,9 @@ class Hamburger extends Component {
       width: '80%',
       transform: this.state.collapsed ? 'rotate(0deg)' : ' rotate(135deg)',
       transition: 'transform .5s ease-in, top .5s ease-in',
-    })
+    }
 
-    const lineMid = css({
+    const lineMid = {
       position: 'absolute',
       margin: '0 10%',
       top: `${this.size / 2}`,
@@ -205,9 +210,9 @@ class Hamburger extends Component {
       height: 2,
       width: this.state.collapsed ? '80%' : 0,
       transition: 'width .4s ease-in .1s',
-    })
+    }
 
-    const lineLast = css({
+    const lineLast = {
       position: 'absolute',
       backgroundColor: this.lineColor,
       height: 2,
@@ -216,12 +221,12 @@ class Hamburger extends Component {
       width: '80%',
       transform: this.state.collapsed ? 'rotate(0deg)' : ' rotate(-135deg)',
       transition: 'transform .5s ease-in, top .5s ease-in',
-    })
+    }
     return (
-      <div className={menu}>
-        <div className={lineTop} />
-        <div className={lineMid} />
-        <div className={lineLast} />
+      <div className={menu} css={menu}>
+        <div className={lineTop}  css={lineTop}/>
+        <div className={lineMid}css={lineMid} />
+        <div className={lineLast}css={lineLast} />
       </div>
     )
   }

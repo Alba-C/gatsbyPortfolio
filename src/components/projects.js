@@ -1,6 +1,7 @@
-import React, { Component } from 'react'
+import { Component } from 'react'
 import { withPrefix } from 'gatsby'
-import { css } from '@emotion/css'
+import { css, jsx } from '@emotion/react'
+/** @jsx jsx */
 
 const cardBottom = css`
   position: absolute;
@@ -221,7 +222,7 @@ class Projects extends Component {
     return (
       <section>
         <div
-          className={css`
+          css={css`
             max-width: 1200px;
             margin: 10px auto;
 
@@ -231,7 +232,7 @@ class Projects extends Component {
           `}
         >
           <h1
-            className={css`
+            css={css`
               margin-bottom: 0;
             `}
           >
@@ -239,7 +240,7 @@ class Projects extends Component {
           </h1>
           <div
             id="projects"
-            className={css`
+            css={css`
               display: flex;
               flex-wrap: wrap;
               align-content: space-between;
@@ -254,11 +255,11 @@ class Projects extends Component {
               return (
                 <div
                   key={
-                    i // className="project"
+                    i
                   }
-                  className={outerCard}
+                  css={outerCard}
                 >
-                  <div className={cardTop}>
+                  <div css={cardTop}>
                     <img
                       src={withPrefix(project.image)}
                       alt={project.title}
@@ -269,7 +270,7 @@ class Projects extends Component {
                     <h2>{project.title}</h2>
                   </div>
 
-                  <div className={cardBottom}>
+                  <div css={cardBottom}>
                     <a
                       href={project.link}
                       aria-label={project.title}
@@ -277,7 +278,7 @@ class Projects extends Component {
                     >
                       <h2>{project.title}</h2>
                       <p
-                        className={css`
+                        css={css`
                           text-align: left;
                         `}
                       >

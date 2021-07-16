@@ -46,9 +46,9 @@ class BackToTop extends Component {
   }
   render() {
     return (
-      <div
+      <button
         onClick={this.toTop}
-        aria-label="return to top"
+        tabIndex="0"
         css={css`
           width: 50px;
           height: 50px;
@@ -60,8 +60,11 @@ class BackToTop extends Component {
           align-items: center;
           justify-content: center;
           border-radius: 5px;
+          outline: none;
+          border: none;
           transition: all 0.3s ease 0s;
           background-color: ${this.state.bgColor};
+          box-shadow: 0 0px 5px rgba(0, 0, 0, 0.6);
           visibility: ${this.state.showBackToTop ? 'visible' : 'hidden'};
           opacity: ${this.state.showBackToTop ? 1 : 0};
           &:hover {
@@ -71,7 +74,7 @@ class BackToTop extends Component {
         `}
       >
         <Chevron bgColor="white" width="40" />
-      </div>
+      </button>
     )
   }
 }
