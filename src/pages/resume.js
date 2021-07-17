@@ -114,7 +114,7 @@ const Resume = () => {
             Christopher@CafeRE.com
           </a>
           <a
-            href={withPrefix('/static/assets/resume.pdf')}
+            href={withPrefix('assets/images/resume.pdf')}
             download
             id="btnResume"
             css={css`
