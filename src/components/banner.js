@@ -1,38 +1,38 @@
-import React, { Component } from 'react'
-import { css } from '@emotion/react'
-import { withPrefix } from 'gatsby'
+import React, { Component } from 'react';
+import { css } from '@emotion/react';
+import { withPrefix } from 'gatsby';
 
 export default class Banner extends Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
-      thingsIdo: 'Make',
-    }
+      thingsIdo: 'Make'
+    };
   }
   mouseEnter = () => {
     switch (this.state.thingsIdo) {
       case 'Make':
-        return this.setState({ thingsIdo: 'Break' })
+        return this.setState({ thingsIdo: 'Break' });
       case 'Break':
-        return this.setState({ thingsIdo: 'Fix' })
+        return this.setState({ thingsIdo: 'Fix' });
       default:
-        return this.setState({ thingsIdo: 'Make' })
+        return this.setState({ thingsIdo: 'Make' });
     }
-  }
+  };
 
   componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll.bind(this))
+    window.addEventListener('scroll', this.handleScroll.bind(this));
   }
 
   handleScroll(event) {
-    let scrollTop = event.currentTarget.pageYOffset
+    let scrollTop = event.currentTarget.pageYOffset;
     switch (true) {
       case scrollTop > 150 && scrollTop < 249:
-        return this.setState({ thingsIdo: 'Break' })
+        return this.setState({ thingsIdo: 'Break' });
       case scrollTop > 250:
-        return this.setState({ thingsIdo: 'Fix' })
+        return this.setState({ thingsIdo: 'Fix' });
       default:
-        return this.setState({ thingsIdo: 'Make' })
+        return this.setState({ thingsIdo: 'Make' });
     }
   }
 
@@ -51,7 +51,6 @@ export default class Banner extends Component {
             align-items: center;
           `}
         >
-
           <img
             src={withPrefix('/assets/images/IMG_BW7038.jpg')}
             width="150px"
@@ -139,8 +138,7 @@ export default class Banner extends Component {
                     color: white;
                     font-weight: 800;
                     margin: 0 5px;
-                    font-family: 'Audiowide', 'Franklin Gothic Medium',
-                      'Arial Narrow', 'Arial', 'sans-serif';
+                    font-family: 'Audiowide', 'Franklin Gothic Medium', 'Arial Narrow', 'Arial', 'sans-serif';
                     box-shadow: 0px 1px 5px 1px rgba(69, 69, 69, 0.639);
                     margin: 0 5px 0 2px;
                     border-radius: 0 5px 5px 0;
@@ -148,19 +146,7 @@ export default class Banner extends Component {
                     padding: 10px 15px 10px 0;
                     transform: skew(-0.05turn, 10deg);
                     box-shadow: -5px 0px 15px 1px rgba(0, 0, 0, 0.639);
-                    clip-path: polygon(
-                      11% 9%,
-                      13% 1%,
-                      100% 0,
-                      100% 100%,
-                      1% 99%,
-                      6% 81%,
-                      1% 61%,
-                      10% 54%,
-                      0 36%,
-                      11% 26%,
-                      0 15%
-                    );
+                    clip-path: polygon(11% 9%, 13% 1%, 100% 0, 100% 100%, 1% 99%, 6% 81%, 1% 61%, 10% 54%, 0 36%, 11% 26%, 0 15%);
                   `}
                 >
                   eak
@@ -177,8 +163,7 @@ export default class Banner extends Component {
                   font-weight: 800;
                   padding: 10px 15px;
                   margin: 0 5px;
-                  font-family: 'Audiowide', 'Franklin Gothic Medium',
-                    'Arial Narrow', 'Arial', 'sans-serif';
+                  font-family: 'Audiowide', 'Franklin Gothic Medium', 'Arial Narrow', 'Arial', 'sans-serif';
                   box-shadow: 0px 1px 5px 1px rgba(69, 69, 69, 0.639);
                   background-color: #002851;
                 `}
@@ -194,7 +179,7 @@ export default class Banner extends Component {
               padding: 0 20px;
             `}
           >
-            Front End Developer based in Orlando, FL
+            Full stack developer based in Orlando, FL
           </p>
           <p
             css={css`
@@ -206,6 +191,6 @@ export default class Banner extends Component {
           </p>
         </div>
       </div>
-    )
+    );
   }
 }

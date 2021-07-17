@@ -1,8 +1,18 @@
-import { Component } from 'react'
-import { withPrefix } from 'gatsby'
-import { css, jsx } from '@emotion/react'
+import { Component } from 'react';
+import { withPrefix } from 'gatsby';
+import { css, jsx } from '@emotion/react';
 /** @jsx jsx */
 
+const projectsContainer = css`
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  justify-content: space-between;
+  padding: 10px;
+  @media (max-width: 1174px) {
+    justify-content: space-around;
+  }
+`;
 const cardBottom = css`
   position: absolute;
   pointer-events: inherit;
@@ -165,7 +175,7 @@ const cardBottom = css`
         }
       }
   }
-`
+`;
 const outerCard = css`
   position: relative;
   padding: 20px;
@@ -196,7 +206,7 @@ const outerCard = css`
     
   }
   }
-`
+`;
 const cardTop = css`
   pointer-events: inherit;
   transition: all 0.25s ease-in;
@@ -204,18 +214,37 @@ const cardTop = css`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: 325px;
   h2 {
     font-size: 1.3em;
+    margin: 0;
     :hover {
       display: none;
     }
+  }
+  .cart-top__image-container {
+    height: 245px;
+    width: 100%;
+    overflow: hidden;
+    border: 1px solid red;
+  }
+  .cart-top__image-container img {
+    height: auto;
+    width: auto;
+    max-width: 100%;
+  }
+  .cart-top__image-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
   }
   @media (max-width: 759px) {
     h2 {
       display: none;
     }
   }
-`
+`;
 
 class Projects extends Component {
   render() {
@@ -225,7 +254,6 @@ class Projects extends Component {
           css={css`
             max-width: 1200px;
             margin: 10px auto;
-
             text-align: center;
             padding-top: 10px;
             padding-bottom: 10px;
@@ -238,44 +266,21 @@ class Projects extends Component {
           >
             Projects: {this.props.filterWord}
           </h1>
-          <div
-            id="projects"
-            css={css`
-              display: flex;
-              flex-wrap: wrap;
-              align-content: space-between;
-              justify-content: space-between;
-              padding: 10px;
-              @media (max-width: 1174px) {
-                justify-content: space-around;
-              }
-            `}
-          >
+          <div id="projects" css={projectsContainer}>
             {this.props.projectData.map((project, i) => {
               return (
-                <div
-                  key={
-                    i
-                  }
-                  css={outerCard}
-                >
+                <div key={i} css={outerCard}>
                   <div css={cardTop}>
-                    <img
-                      src={withPrefix(project.image)}
-                      alt={project.title}
-                      width="100%"
-                      className="projectImg"
-                    />
-
-                    <h2>{project.title}</h2>
+                    <div className="cart-top__image-container">
+                      <img src={withPrefix(project.image)} alt={project.title} width="100%" />
+                    </div>
+                    <div className="cart-top__image-title">
+                      <h2>{project.title}</h2>
+                    </div>
                   </div>
 
                   <div css={cardBottom}>
-                    <a
-                      href={project.link}
-                      aria-label={project.title}
-                      target="blank"
-                    >
+                    <a href={project.link} aria-label={project.title} target="blank">
                       <h2>{project.title}</h2>
                       <p
                         css={css`
@@ -285,21 +290,18 @@ class Projects extends Component {
                         {project.description}
                       </p>
                       <div className="keywords">
-                        <code>
-                          {' '}
-                          {'[ ' + project.keywords.join(', ') + ' ]'}{' '}
-                        </code>
+                        <code> {'[ ' + project.keywords.join(', ') + ' ]'} </code>
                       </div>
                     </a>
                   </div>
                 </div>
-              )
+              );
             })}
           </div>
         </div>
       </section>
-    )
+    );
   }
 }
 
-export default Projects
+export default Projects;

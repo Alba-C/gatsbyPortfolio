@@ -1,12 +1,12 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
-import { StaticQuery, graphql } from 'gatsby'
-import { css } from '@emotion/react'
+import React from 'react';
+import PropTypes from 'prop-types';
+import Helmet from 'react-helmet';
+import { StaticQuery, graphql } from 'gatsby';
+import { css } from '@emotion/react';
 
-import Header from './header'
-import Footer from './footer'
-import './layout.css'
+import Header from './header';
+import Footer from './footer';
+import './layout.css';
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -32,19 +32,12 @@ const Layout = ({ children }) => (
             { name: 'robots', content: 'follow' },
             { name: 'robots', content: 'index' },
             { name: 'googlebot', content: 'follow' },
-            { name: 'charset', content: 'utf-8' },
+            { name: 'charset', content: 'utf-8' }
           ]}
         >
-          <link
-            rel="preload"
-            as="style"
-            href="https://fonts.googleapis.com/css?family=Audiowide|Montserrat|Poller+One"
-          />
+          <link rel="preload" as="style" href="https://fonts.googleapis.com/css?family=Audiowide|Montserrat|Poller+One" />
 
-          <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/css?family=Audiowide|Montserrat|Poller+One"
-          />
+          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Montserrat|Poller+One" />
 
           <html lang="en" />
         </Helmet>
@@ -53,7 +46,7 @@ const Layout = ({ children }) => (
           id="top"
           css={css`
             margin: 0 auto;
-            padding-top: 0;
+            overflow-x: hidden;
             h1,
             h2,
             h3 {
@@ -67,10 +60,10 @@ const Layout = ({ children }) => (
       </div>
     )}
   />
-)
+);
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired,
-}
+  children: PropTypes.node.isRequired
+};
 
-export default Layout
+export default Layout;

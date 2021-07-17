@@ -1,29 +1,28 @@
-import React from 'react'
-import { css } from '@emotion/react'
-import Chevron from '../components/chevron'
-import { withPrefix } from 'gatsby'
+import React from 'react';
+import { css } from '@emotion/react';
+import Chevron from '../components/chevron';
+import { withPrefix } from 'gatsby';
 
 const footer = () => {
   return (
     <footer
       css={css`
         background-color: #002851;
-        color: white;
+        color: #ffffff;
         width: 100%;
-        bottom: 0;
+        padding: 20px;
       `}
     >
       <div
         css={css`
           margin: 0 auto;
           max-width: 1200px;
-          padding-top: 0;
         `}
       >
         <div
           onClick={() => window.scroll(0, 0)}
           aria-label="return to top"
-          role='button'
+          role="button"
           aria-hidden="true"
           tabIndex="0"
           css={css`
@@ -62,22 +61,18 @@ const footer = () => {
         <div
           css={css`
             max-width: 1000px;
-            margin: -50px auto;
-            padding: 20px;
+            margin: 0 auto 20px;
             width: 400px;
             display: flex;
             justify-content: space-between;
             z-index: 100;
+            position: relatie;
             @media (max-width: 600px) {
               width: 100%;
             }
           `}
         >
-          <a
-            href="https://codepen.io/Alba-C/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="https://codepen.io/Alba-C/" target="_blank" rel="noopener noreferrer">
             <img
               src={withPrefix('assets/icons/codepenlogo.png')}
               alt="codepen logo"
@@ -91,11 +86,7 @@ const footer = () => {
               `}
             />
           </a>
-          <a
-            href="https://github.com/Alba-c"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="https://github.com/Alba-c" target="_blank" rel="noopener noreferrer">
             <img
               src={withPrefix('assets/icons/GitHub-Mark-Light-64px.png')}
               alt="github logo"
@@ -139,16 +130,17 @@ const footer = () => {
           css={css`
             font-size: 0.7rem;
             color: #e4e4e4;
-            float: right;
-            padding-top: 20px;
-            padding-right: 30px;
+            right: 100%;
+            position: relative;
+            text-align: center;
+            margin: 0;
           `}
         >
           © Chris Albanse 2021
         </p>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default footer
+export default footer;
