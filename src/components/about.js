@@ -1,5 +1,5 @@
-import React from 'react'
-import { css } from '@emotion/react'
+import React from 'react';
+import { css } from '@emotion/react';
 
 const About = () => {
   return (
@@ -18,6 +18,9 @@ const About = () => {
           display: flex;
           flex-direction: column;
           padding: 25px 50px;
+          @media (max-width: 768px) {
+            padding: 30px 20px;
+          }
         `}
       >
         <h2
@@ -36,20 +39,15 @@ const About = () => {
           Husband, dog person, all-around creative and big fan of JavaScript.
         </p>
         <p>
-          In addition to making cool things with code, I have an extensive
-          background in business development, marketing and education. I've
-          worked for businesses large and small. I've managed teams, worked
-          independently, and led week-long training sessions. Above all, I love
-          helping people bring their visions to life.
+          In addition to making cool things with code, I have an extensive background in business development, marketing and education. I've worked for
+          businesses large and small. I've managed teams, worked independently, and led week-long training sessions. Above all, I love helping people bring
+          their visions to life.
         </p>
 
-        <p>
-          I'm never scared of a challenge, and can find a solution to any
-          problem you throw at me.
-        </p>
+        <p>I'm never scared of a challenge, and can find a solution to any problem you throw at me.</p>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default About
+export default About;

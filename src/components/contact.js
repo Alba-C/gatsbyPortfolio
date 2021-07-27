@@ -1,45 +1,42 @@
-import React, { Component } from 'react'
-import { css } from '@emotion/react'
-// import { navigateTo } from "gatsby-link";
-import navigateTo from 'gatsby-link'
-import ReCAPTCHA from 'react-google-recaptcha'
-
-// const RECAPTCHA_KEY = process.env.SITE_RECAPTCHA_KEY
+import React, { Component } from 'react';
+import { css } from '@emotion/react';
+import navigateTo from 'gatsby-link';
+import ReCAPTCHA from 'react-google-recaptcha';
 
 function encode(data) {
   return Object.keys(data)
     .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
-    .join('&')
+    .join('&');
 }
 
 export default class Contact extends Component {
   constructor(props) {
-    super(props)
-    this.state = {}
+    super(props);
+    this.state = {};
   }
 
   handleChange = (e) => {
-    this.setState({ [e.target.name]: e.target.value })
-  }
+    this.setState({ [e.target.name]: e.target.value });
+  };
 
   handleRecaptcha = (value) => {
-    this.setState({ 'g-recaptcha-response': value })
-  }
+    this.setState({ 'g-recaptcha-response': value });
+  };
 
   handleSubmit = (e) => {
-    e.preventDefault()
-    const form = e.target
+    e.preventDefault();
+    const form = e.target;
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({
         'form-name': form.getAttribute('name'),
-        ...this.state,
-      }),
+        ...this.state
+      })
     })
       .then(() => navigateTo(form.getAttribute('action')))
-      .catch((error) => alert(error))
-  }
+      .catch((error) => alert(error));
+  };
 
   form = css({
     fontSize: '1.25rem',
@@ -49,9 +46,9 @@ export default class Contact extends Component {
     zIndex: 999,
     display: 'flex',
     '@media (max-width: 600px)': {
-      display: 'block',
-    },
-  })
+      display: 'block'
+    }
+  });
   render() {
     return (
       <section
@@ -68,6 +65,9 @@ export default class Contact extends Component {
             display: flex;
             flex-direction: column;
             padding: 25px 50px 50px 50px;
+            @media (max-width: 768px) {
+              padding: 30px 20px;
+            }
           `}
           id="contact"
         >
@@ -87,10 +87,8 @@ export default class Contact extends Component {
             Do you want to hire me? Need a consultation on a new project?
           </p>
           <p>
-            Perhaps, you need assistance moving a large sum of money
-            internationally and require someone who won't ask a lot of
-            questions. ¯\_(ツ)_/¯ Whatever the reason, don't be shy. I'd love to
-            hear from you.
+            Perhaps, you need assistance moving a large sum of money internationally and require someone who won't ask a lot of questions. ¯\_(ツ)_/¯ Whatever
+            the reason, don't be shy. I'd love to hear from you.
           </p>
           <form
             name="contactForm"
@@ -106,17 +104,26 @@ export default class Contact extends Component {
               flex-direction: column;
               justify-content: stretch;
               background-color: #f1f7ed;
-              padding: 30px;
-              margin: 0 -15px;
+              padding: 50px 30px;
+              margin: 20px 0;
               border-radius: 5px;
+
+              input,
+              textarea {
+                border-style: solid;
+                border-width: 1px;
+                padding: 3px 10px;
+                resize: none;
+              }
+
+              input:focus,
+              textarea:focus {
+                box-shadow: 0 0 0 2pt #c0e0de;
+                outline: 1px solid #bada55;
+              }
             `}
           >
-            <input
-              type="hidden"
-              name="contactForm"
-              value="contactForm"
-              onChange={this.handleChange}
-            />
+            <input type="hidden" name="contactForm" value="contactForm" onChange={this.handleChange} />
             <p
               css={css`
                 display: flex;
@@ -233,8 +240,7 @@ export default class Contact extends Component {
               `}
             >
               <label htmlFor="bot-field">
-                Don’t fill this out if you're human:{' '}
-                <input name="bot-field" id="bot-field" />
+                Don’t fill this out if you're human: <input name="bot-field" id="bot-field" />
               </label>
             </p>
 
@@ -269,11 +275,7 @@ export default class Contact extends Component {
                   }
                 `}
               >
-                <ReCAPTCHA
-                  ref="recaptcha"
-                  sitekey="6LdSXHoUAAAAAEtEK_b6AMI8gXK2sLNLZRVqWTNh"
-                  onChange={this.handleRecaptcha}
-                />
+                <ReCAPTCHA ref="recaptcha" sitekey="6LdSXHoUAAAAAEtEK_b6AMI8gXK2sLNLZRVqWTNh" onChange={this.handleRecaptcha} />
               </span>
             </div>
 
@@ -320,6 +322,6 @@ export default class Contact extends Component {
           </form>
         </div>
       </section>
-    )
+    );
   }
 }
