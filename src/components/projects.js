@@ -210,7 +210,6 @@ const projectsStyles = css`
       transform: rotate(0) skew(0) translate(0);
       transition: all 0.25s ease-out;
       text-align: center;
-      z-index: 1200;
       top: 0;
     }
 
