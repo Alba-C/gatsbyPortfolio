@@ -127,6 +127,8 @@ select {
 button,
 html [type=button] {
   -webkit-appearance: button;
+  outline: none;
+  border: none;;
 }
 [type=button]::-moz-focus-inner,
 [type=reset]::-moz-focus-inner,
@@ -141,6 +143,22 @@ button::-moz-focus-inner {
 button:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
+button:hover,
+button:focus,
+button:active:focus,
+.button:hover,
+.button:focus,
+.button:active:focus {
+  text-decoration: none;
+
+  color: inherit;
+  outline: none;
+}
+button:active{
+  -webkit-transform: scale(0.95);
+  transform: scale(0.95);
+}
+
 fieldset {
   border: 1px solid silver;
   margin: 0 2px;
@@ -217,7 +235,6 @@ img {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
 }
 h1 {
   margin-left: 0;

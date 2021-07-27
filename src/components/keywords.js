@@ -47,6 +47,10 @@ const Keywords = (props) => {
                 color: rgb(69, 69, 69);
                 font-weight: bold;
               }
+              &:active {
+                background-color: #82d8d8;
+                box-shadow: inset 0 0 5px rgba(0,0,0, 0.3)
+              }
             `}
             style={{
               color: props.filterWord === key && '#555',
