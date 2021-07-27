@@ -101,6 +101,7 @@ const projectsStyles = css`
     background-color: #002851;
     transform-origin: top left;
     transform: rotate(-45deg) skew(-45deg) translateY(300%) scale(0.7);
+    margin: 0;
 
     opacity: 1;
     transition: all 0.25s ease-out;
@@ -151,7 +152,6 @@ const projectsStyles = css`
 
   .projects__card-bottom:hover .projects__card-keywords {
     transform: rotateX(0deg);
-    /* margin-bottom: -0.5em; */
     transition: all 0.25s ease-out;
   }
 
@@ -159,7 +159,6 @@ const projectsStyles = css`
     text-align: left;
     z-index: -1;
     padding-left: 1.5em 0.5em 0.5em 1em;
-    opacity: 0;
     background-color: transparent;
 
     ::before {
@@ -172,7 +171,6 @@ const projectsStyles = css`
   }
 
   .projects__card-bottom:hover .projects__card-keywords code {
-    opacity: 1;
     transform: translateX(0%) translateY(0) rotate(0deg);
     transition: all 0.25s ease-in;
   }
@@ -273,9 +271,9 @@ class Projects extends Component {
                 </figure>
 
                 <div className="projects__card-bottom">
+                  <h2 className="projects__card-bottom__title">{project.title}</h2>
+                  <p className="projects__card-bottom__description">{project.description}</p>
                   <a href={project.link} aria-label={project.title} target="blank">
-                    <h2 className="projects__card-bottom__title ">{project.title}</h2>
-                    <p className="projects__card-bottom__description">{project.description}</p>
                     <div className="projects__card-keywords">
                       <code> {'[ ' + project.keywords.join(', ') + ' ]'} </code>
                     </div>

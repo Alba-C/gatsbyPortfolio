@@ -149,7 +149,7 @@ const Hamburger = ({ collapsed, background, lineColor, size, onClick }) => {
   const burgerStyles = css`
     height: ${size}px;
     width: ${size}px;
-    display: block;
+    display: none;
     background-color: ${background};
     border: solid 1px ${lineColor} !important;
     padding: 0;
@@ -185,6 +185,10 @@ const Hamburger = ({ collapsed, background, lineColor, size, onClick }) => {
       top: unset;
       bottom: 15%;
       transform: ${collapsed ? 'rotate(0deg)' : 'translate(5px , -2px) rotate(-45deg)'};
+    }
+
+    @media (max-width: 768px) {
+      display: block;
     }
   `;
 

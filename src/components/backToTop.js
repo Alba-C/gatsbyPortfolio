@@ -1,49 +1,49 @@
-import React, { Component } from 'react'
-import { css } from '@emotion/react'
-import Chevron from '../components/chevron'
+import React, { Component } from 'react';
+import { css } from '@emotion/react';
+import Chevron from '../components/chevron';
 
 class BackToTop extends Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       anchor: '/#',
       bgColor: 'rgb(189, 59, 36)',
       arrowColor: 'white',
-      showBackToTop: false,
-    }
+      showBackToTop: false
+    };
   }
 
   handleScroll(event) {
-    const scrollTop = event.currentTarget.pageYOffset
-    const windowHeight = document.documentElement.getBoundingClientRect().height
-    const width = window.innerWidth
+    const scrollTop = event.currentTarget.pageYOffset;
+    const windowHeight = document.documentElement.getBoundingClientRect().height;
+    const width = window.innerWidth;
     switch (true) {
       case width <= 400 && scrollTop / windowHeight >= 0.94:
-        return this.setState({ showBackToTop: false })
+        return this.setState({ showBackToTop: false });
       case width > 400 && width <= 600 && scrollTop / windowHeight >= 0.9:
-        return this.setState({ showBackToTop: false })
+        return this.setState({ showBackToTop: false });
       case width > 600 && width <= 1000 && scrollTop / windowHeight >= 0.88:
-        return this.setState({ showBackToTop: false })
+        return this.setState({ showBackToTop: false });
       case width > 1000 && width <= 1200 && scrollTop / windowHeight >= 0.8:
-        return this.setState({ showBackToTop: false })
+        return this.setState({ showBackToTop: false });
       case width > 1200 && scrollTop / windowHeight >= 0.78:
-        return this.setState({ showBackToTop: false })
+        return this.setState({ showBackToTop: false });
       case scrollTop > 250:
-        return this.setState({ showBackToTop: true })
+        return this.setState({ showBackToTop: true });
       default:
-        return this.setState({ showBackToTop: false })
+        return this.setState({ showBackToTop: false });
     }
   }
   componentDidMount = (props) => {
-    window.addEventListener('scroll', this.handleScroll.bind(this))
-  }
+    window.addEventListener('scroll', this.handleScroll.bind(this));
+  };
   componentWillUnmount = () => {
-    window.removeEventListener('scroll', this.handleScroll.bind(this))
-  }
+    window.removeEventListener('scroll', this.handleScroll.bind(this));
+  };
 
   toTop = () => {
-    window.scrollTo(0, 0)
-  }
+    window.scrollTo(0, 0);
+  };
   render() {
     return (
       <button
@@ -53,7 +53,7 @@ class BackToTop extends Component {
           width: 50px;
           height: 50px;
           position: fixed;
-          z-index: 1200;
+          z-index: 1500;
           right: 10px;
           bottom: 20px;
           display: flex;
@@ -75,8 +75,8 @@ class BackToTop extends Component {
       >
         <Chevron bgColor="white" width="40" />
       </button>
-    )
+    );
   }
 }
 
-export default BackToTop
+export default BackToTop;
